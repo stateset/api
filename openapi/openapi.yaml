@@ -45,6 +45,79 @@ tags:
     description: Operations about users.
   - name: Tag
     description: This is a tag description.
+  - name: Accounts
+    description: Operations related to accounts.
+  - name: Agreements
+    description: Operations related to agreements.
+  - name: AgreementLineItems
+    description: Operations related to agreement line items.
+  - name: BillOfMaterials
+    description: Operations related to bill of materials.
+  - name: BillOfMaterialsLineItem
+    description: Operations related to bill of materials line items.
+  - name: Call
+    description: Operations related to calls.
+  - name: Campaigns
+    description: Operations related to campaigns.
+  - name: Case
+    description: Operations related to cases.
+  - name: Contacts
+    description: Operations related to contacts.
+  - name: Customers
+    description: Operations related to customers.
+  - name: CycleCount
+    description: Operations related to cycle counts.
+  - name: InventoryItem
+    description: Operations related to inventory items.
+  - name: Invoice
+    description: Operations related to invoices.
+  - name: Leads
+    description: Operations related to leads.
+  - name: ManufactureOrder
+    description: Operations related to manufacturing orders.
+  - name: ManufactureOrderLineItem
+    description: Operations related to manufacturing order line items.
+  - name: Message
+    description: Operations related to messages.
+  - name: Notes
+    description: Operations related to notes.
+  - name: Opportunity
+    description: Operations related to opportunities.
+  - name: PackingList
+    description: Operations related to packing lists.
+  - name: PackingListItem
+    description: Operations related to packing list items.
+  - name: Pick
+    description: Operations related to picks.
+  - name: PickLineItem
+    description: Operations related to pick line items.
+  - name: Problem
+    description: Operations related to problems.
+  - name: Reconcile
+    description: Operations related to reconciling.
+  - name: ReconcileLineItem
+    description: Operations related to reconcile line items.
+  - name: Return
+    description: Operations related to returns.
+  - name: ReturnItem
+    description: Operations related to return items.
+  - name: Suppliers
+    description: Operations related to suppliers.
+  - name: Task
+    description: Operations related to tasks.
+  - name: User
+    description: Operations related to users.
+  - name: Vendors
+    description: Operations related to vendors.
+  - name: Warranty
+    description: Operations related to warranties.
+  - name: WarrantyItem
+    description: Operations related to warranty items.
+  - name: WorkOrder
+    description: Operations related to work orders.
+  - name: WorkOrderLineItem
+    description: Operations related to work order line items.
+
 servers:
   - url: https://{tenant}/api/v1
     variables:
