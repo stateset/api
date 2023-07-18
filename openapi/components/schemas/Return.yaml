@@ -1,0 +1,110 @@
+type: object
+properties:
+  id:
+    type: text
+    primary_key: true
+    unique: true
+  status:
+    type: text
+    nullable: true
+  order_id:
+    type: text
+    nullable: true
+  rma:
+    type: text
+    nullable: true
+  tracking_number:
+    type: text
+    nullable: true
+  description:
+    type: text
+    nullable: true
+  customer_email:
+    type: text
+    nullable: true
+  zendesk_number:
+    type: text
+    nullable: true
+  action_needed:
+    type: text
+    nullable: true
+  issue:
+    type: text
+    nullable: true
+  order_date:
+    type: date
+    nullable: true
+  shipped_date:
+    type: date
+    nullable: true
+  requested_date:
+    type: date
+    nullable: true
+  enteredBy:
+    type: text
+    nullable: true
+  customer_id:
+    type: uuid
+    nullable: true
+  amount:
+    type: text
+    nullable: true
+  reported_condition:
+    type: text
+    nullable: true
+  tax_refunded:
+    type: text
+    nullable: true
+  total_refunded:
+    type: text
+    nullable: true
+  created_date:
+    type: timestamp with time zone
+    nullable: true
+    default: now()
+  reason_category:
+    type: text
+    nullable: true
+  flat_rate_shipping:
+    type: numeric
+    nullable: true
+  refunded_date:
+    type: date
+    nullable: true
+  warehouse_received_date:
+    type: timestamp with time zone
+    nullable: true
+  warehouse_condition_date:
+    type: timestamp with time zone
+    nullable: true
+  fedex_status:
+    type: text
+    nullable: true
+  scanned_serial_number:
+    type: text
+    nullable: true
+  match:
+    type: text
+    nullable: true
+  country:
+    type: text
+    nullable: true
+  serial_number:
+    type: text
+    nullable: true
+  condition:
+    type: text
+    nullable: true
+  order_refunded:
+    type: boolean
+    nullable: true
+    default: false
+  workflow_id:
+    type: text
+    nullable: true
+  sso_id:
+    type: uuid
+    nullable: true
+  customer_email_normalized:
+    type: text
+    nullable: true

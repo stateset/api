@@ -1,0 +1,117 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier for the contact.
+  firstName:
+    type: string
+    description: The first name of the contact.
+  lastName:
+    type: string
+    description: The last name of the contact.
+  phone:
+    type: string
+    description: The phone number of the contact.
+  email:
+    type: string
+    format: email
+    description: The email address of the contact.
+  controller:
+    type: string
+    description: The controller of the contact.
+  processor:
+    type: string
+    description: The processor of the contact.
+  account_id:
+    type: string
+    format: uuid
+    description: The unique identifier for the account associated with the contact.
+  user_id:
+    type: string
+    format: uuid
+    description: The unique identifier for the user associated with the contact.
+  title:
+    type: string
+    description: The title of the contact.
+  description:
+    type: string
+    description: The description of the contact.
+  birthdate:
+    type: string
+    description: The birthdate of the contact.
+  department:
+    type: string
+    description: The department of the contact.
+  leadSource:
+    type: string
+    description: The lead source of the contact.
+  mailingCity:
+    type: string
+    description: The city of the mailing address of the contact.
+  mailingCountry:
+    type: string
+    description: The country of the mailing address of the contact.
+  mailingGeocodeAccuracy:
+    type: string
+    description: The geocode accuracy of the mailing address of the contact.
+  mailingState:
+    type: string
+    description: The state of the mailing address of the contact.
+  mailingStreet:
+    type: string
+    description: The street address of the mailing address of the contact.
+  photoUrl:
+    type: string
+    description: The URL of the photo of the contact.
+  created_at:
+    type: string
+    format: date-time
+    description: The date and time when the contact was created.
+  nextMeeting:
+    type: string
+    format: date
+    description: The date of the next meeting with the contact.
+  avatar:
+    type: string
+    description: The avatar of the contact.
+  handle:
+    type: string
+    description: The handle of the contact.
+  assistant:
+    type: string
+    description: The assistant of the contact.
+  assistant_phone:
+    type: string
+    description: The phone number of the assistant of the contact.
+  owner:
+    type: string
+    description: The owner of the contact.
+  created_by:
+    type: string
+    description: The user who created the contact.
+  do_not_call:
+    type: boolean
+    description: Whether the contact should not be called.
+  email_opt_out:
+    type: boolean
+    description: Whether the contact has opted out of receiving emails.
+  fax:
+    type: string
+    description: The fax number of the contact.
+  fax_opt_out:
+    type: boolean
+    description: Whether the contact has opted out of receiving faxes.
+  languages:
+    type: string
+    description: The languages spoken by the contact.
+  invalid_contact:
+    type: boolean
+    description: Whether the contact is invalid.
+  last_modified_by:
+    type: string
+    description: The user who last modified the contact.
+  vendor_id:
+    type: string
+    format: uuid
+    description

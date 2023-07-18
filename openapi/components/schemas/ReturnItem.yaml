@@ -1,0 +1,94 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The unique identifier of the return
+  status:
+    type: string
+    nullable: true
+    description: The status of the return
+  order_id:
+    type: string
+    nullable: true
+    description: The unique identifier of the order associated with the return
+  rma:
+    type: string
+    nullable: true
+    description: The return merchandise authorization number
+  tracking_number:
+    type: string
+    nullable: true
+    description: The tracking number of the returned item
+  description:
+    type: string
+    nullable: true
+    description: A description of the return
+  customerEmail:
+    type: string
+    nullable: true
+    description: The email address of the customer who initiated the return
+  zendesk_number:
+    type: string
+    nullable: true
+    description: The unique identifier of the Zendesk ticket associated with the return
+  action_needed:
+    type: string
+    nullable: true
+    description: Any action required to process the return
+  issue:
+    type: string
+    nullable: true
+    description: The reason for the return
+  order_date:
+    type: string
+    format: date
+    nullable: true
+    description: The date the order was placed
+  shipped_date:
+    type: string
+    format: date
+    nullable: true
+    description: The date the order was shipped
+  requested_date:
+    type: string
+    format: date
+    nullable: true
+    description: The date the return was requested
+  enteredBy:
+    type: string
+    nullable: true
+    description: The name of the employee who entered the return into the system
+  serial_number:
+    type: string
+    nullable: true
+    description: The serial number of the returned item
+  condition:
+    type: string
+    nullable: true
+    description: The condition of the returned item
+  customer_id:
+    type: string
+    format: uuid
+    nullable: true
+    description: The unique identifier of the customer who initiated the return
+  amount:
+    type: string
+    nullable: true
+    description: The total amount refunded for the return
+  reported_condition:
+    type: string
+    nullable: true
+    description: The condition of the item reported by the customer
+  tax_refunded:
+    type: string
+    nullable: true
+    description: The amount of tax refunded for the return
+  total_refunded:
+    type: string
+    nullable: true
+    description: The total amount refunded for the return, including tax
+  created_date:
+    type: string
+    format: date
+    nullable: true
+    description: The date

@@ -1,0 +1,33 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  account_id:
+    type: string
+  taskName:
+    type: string
+  description:
+    type: string
+  status:
+    type: string
+  createdDate:
+    type: string
+    format: date
+  dueDate:
+    type: string
+    format: date
+  email:
+    type: string
+  phone:
+    type: string
+  priority:
+    type: string
+  subject:
+    type: string
+  callType:
+    type: string
+  vendor_id:
+    type: string
+  supplier_id:
+    type: string

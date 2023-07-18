@@ -1,0 +1,33 @@
+type: object
+properties:
+  id:
+    type: string
+  number:
+    type: integer
+  site:
+    type: string
+  yield_location:
+    type: string
+  priority:
+    type: string
+  expected_completion_date:
+    type: string
+    format: date
+  created_on:
+    type: string
+    format: date
+  issued_on:
+    type: string
+    format: date
+  memo:
+    type: string
+  required:
+    - id
+    - number
+    - site
+    - yield_location
+    - priority
+    - expected_completion_date
+    - created_on
+    - issued_on
+    - memo

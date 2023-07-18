@@ -1,0 +1,53 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier for the reconcile line item.
+  line_type:
+    type: string
+    nullable: true
+    description: The type of line item.
+  status:
+    type: string
+    nullable: true
+    description: The status of the line item.
+  part_number:
+    type: string
+    nullable: true
+    description: The part number for the line item.
+  part_name:
+    type: string
+    nullable: true
+    description: The part name for the line item.
+  vendor_part_number:
+    type: string
+    nullable: true
+    description: The vendor part number for the line item.
+  vendor_part_name:
+    type: string
+    nullable: true
+    description: The vendor part name for the line item.
+  order:
+    type: string
+    nullable: true
+    description: The order for the line item.
+  quantity_billed:
+    type: integer
+    nullable: true
+    description: The quantity billed for the line item.
+  billed_unit_cost:
+    type: integer
+    nullable: true
+    description: The billed unit cost for the line item.
+  billed_total_cost:
+    type: integer
+    nullable: true
+    description: The billed total cost for the line item.
+  vendor:
+    type: string
+    nullable: true
+    description: The vendor for the line item.
+  reconcile_number:
+    type: integer
+    description: The unique identifier for the reconcile.

@@ -1,0 +1,49 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The unique identifier of the inventory item.
+  sku:
+    type: string
+    description: The stock keeping unit of the inventory item.
+  description:
+    type: string
+    description: The description of the inventory item.
+  size:
+    type: string
+    description: The size of the inventory item.
+  incoming:
+    type: integer
+    description: The quantity of incoming inventory item.
+  color:
+    type: string
+    description: The color of the inventory item.
+  warehouse:
+    type: integer
+    description: The identifier of the warehouse where the inventory item is stored.
+  arriving:
+    type: string
+    format: date
+    description: The date when the inventory item is expected to arrive.
+  purchase_order_id:
+    type: string
+    description: The identifier of the purchase order for the inventory item.
+  available:
+    type: integer
+    description: The quantity of available inventory item.
+  deliveryDate:
+    type: string
+    format: date
+    description: The date when the inventory item is delivered.
+  arrivalDate:
+    type: string
+    format: date
+    description: The date when the inventory item arrived.
+  upc:
+    type: string
+    description: The universal product code of the inventory item.
+  restock_date:
+    type: string
+    format: date
+    nullable: true
+    description: The date when the inventory item is scheduled to be restocked.

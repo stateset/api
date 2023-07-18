@@ -1,0 +1,28 @@
+type: object
+properties:
+  id:
+    type: integer
+  callNotes:
+    type: string
+  account_id:
+    type: string
+  callStart:
+    type: string
+    format: time
+  callEnd:
+    type: string
+    format: time
+  callType:
+    type: string
+  callName:
+    type: string
+  contact_id:
+    type: string
+  vendor_id:
+    type: string
+  supplier_id:
+    type: string
+required:
+  - id
+  - account_id
+  - callStart

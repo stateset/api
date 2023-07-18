@@ -1,0 +1,121 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The unique identifier for the supplier.
+  supplierName:
+    type: string
+    description: The name of the supplier.
+  supplierType:
+    type: string
+    nullable: true
+    description: The type of supplier.
+  industry:
+    type: string
+    nullable: true
+    description: The industry the supplier belongs to.
+  rating:
+    type: string
+    nullable: true
+    description: The rating of the supplier.
+  phone:
+    type: string
+    nullable: true
+    description: The phone number of the supplier.
+  contact_id:
+    type: string
+    nullable: true
+    description: The ID of the contact person for the supplier.
+  created_at:
+    type: string
+    format: date-time
+    nullable: true
+    default: now()
+    description: The date and time when the supplier was created.
+  is_public:
+    type: boolean
+    nullable: true
+    description: Whether the supplier is public or private.
+  controller:
+    type: string
+    nullable: true
+    description: The controller of the supplier.
+  processor:
+    type: string
+    nullable: true
+    description: The processor of the supplier.
+  is_active:
+    type: boolean
+    nullable: true
+    description: Whether the supplier is active or not.
+  user_id:
+    type: string
+    nullable: true
+    description: The ID of the user who created the supplier.
+  order_id:
+    type: string
+    nullable: true
+    description: The ID of the order associated with the supplier.
+  supplierNotes:
+    type: string
+    nullable: true
+    description: Any notes or comments associated with the supplier.
+  annualRevenue:
+    type: integer
+    nullable: true
+    description: The annual revenue of the supplier.
+  billingCity:
+    type: string
+    nullable: true
+    description: The city for the supplier's billing address.
+  billingCountry:
+    type: string
+    nullable: true
+    description: The country for the supplier's billing address.
+  billingLatitude:
+    type: string
+    nullable: true
+    description: The latitude for the supplier's billing address.
+  billingLongitude:
+    type: string
+    nullable: true
+    description: The longitude for the supplier's billing address.
+  billingState:
+    type: string
+    nullable: true
+    description: The state or province for the supplier's billing address.
+  billingStreet:
+    type: string
+    nullable: true
+    description: The street address for the supplier's billing address.
+  numberOfEmployees:
+    type: number
+    nullable: true
+    description: The number of employees for the supplier.
+  ownership:
+    type: string
+    nullable: true
+    description: The ownership status of the supplier.
+  shippingCity:
+    type: string
+    nullable: true
+    description: The city for the supplier's shipping address.
+  shippingCountry:
+    type: string
+    nullable: true
+    description: The country for the supplier's shipping address.
+  shippingLatitude:
+    type: string
+    nullable: true
+    description: The latitude for the supplier's shipping address.
+  shippingLongitude:
+    type: string
+    nullable: true
+    description: The longitude for the supplier's shipping address.
+  shippingState:
+    type: string
+    nullable: true
+    description: The state or province for the supplier's shipping address.
+  shippingStreet:
+    type: string
+    nullable:

@@ -1,0 +1,47 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    nullable: false
+    description: The unique identifier of the cycle count line item.
+  cycle_count_number:
+    type: integer
+    nullable: true
+    description: The number of the cycle count associated with this line item.
+  status:
+    type: string
+    nullable: true
+    description: The status of the cycle count line item.
+  part:
+    type: string
+    nullable: true
+    description: The part associated with the cycle count line item.
+  standard_tracking:
+    type: string
+    nullable: true
+    description: The standard tracking information associated with the cycle count line item.
+  serialized_tracking:
+    type: string
+    nullable: true
+    description: The serialized tracking information associated with the cycle count line item.
+  quantity_expected:
+    type: integer
+    nullable: true
+    description: The expected quantity of the part associated with the cycle count line item.
+  quantity_counted:
+    type: integer
+    nullable: true
+    description: The actual quantity of the part counted during the cycle count.
+  variance_quantity:
+    type: integer
+    nullable: true
+    description: The difference between the expected and actual quantity of the part.
+  variance_cost:
+    type: integer
+    nullable: true
+    description: The difference in cost between the expected and actual quantity of the part.
+  explanation:
+    type: string
+    nullable: true
+    description: An explanation for any variances in the cycle count line item.

@@ -1,0 +1,61 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The unique identifier for the agreement.
+  agreementName:
+    type: string
+    description: The name of the agreement.
+  agreementNumber:
+    type: string
+    description: The number associated with the agreement.
+  agreementHash:
+    type: string
+    description: The hash of the agreement.
+  agreementStatus:
+    type: string
+    description: The status of the agreement.
+  agreementType:
+    type: string
+    description: The type of the agreement.
+  totalAgreementValue:
+    type: string
+    description: The total value of the agreement.
+  agreementLineItems:
+    type: string
+    description: The line items associated with the agreement.
+  attachments:
+    type: string
+    description: The attachments associated with the agreement.
+  party:
+    type: string
+    description: The party associated with the agreement.
+  counterparty:
+    type: string
+    description: The counterparty associated with the agreement.
+  linearId:
+    type: string
+    description: The linear ID associated with the agreement.
+  opportunity_id:
+    type: string
+    description: The opportunity ID associated with the agreement.
+  user_id:
+    type: string
+    description: The user ID associated with the agreement.
+  price_list_id:
+    type: string
+    description: The price list ID associated with the agreement.
+  order_id:
+    type: string
+    description: The order ID associated with the agreement.
+  account_id:
+    type: string
+    description: The account ID associated with the agreement.
+  startDate:
+    type: string
+    format: date
+    description: The start date of the agreement.
+  endDate:
+    type: string
+    format: date
+    description: The end date of the agreement.
