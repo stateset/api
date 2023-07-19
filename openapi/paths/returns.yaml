@@ -1,0 +1,80 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Return
+  summary: Get return by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getReturnById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+    - name: with_id
+      in: query
+      description: Filter returns without id
+      schema:
+        type: boolean
+  security:
+    - main_auth:
+        - read:returns
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Return.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Return
+  summary: Updated return
+  description: Updating a return.
+  operationId: updateReturn
+  parameters:
+    - name: id
+      in: path
+      description: The id of the return that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:returns
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Return.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Return.yaml
+    description: Updated return object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid return supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml
