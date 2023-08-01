@@ -11,7 +11,7 @@ get:
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getManufactureLineItemById
+  operationId: getBillOfMaterialsLineItemById
   parameters:
     - name: id
       in: path
@@ -41,7 +41,7 @@ put:
     - Bill Of Materials Line Items
   summary: Updated billofmaterials line item
   description: This can only be done by the logged in user.
-  operationId: updateManufactureLineItem
+  operationId: updateBillOfMaterialsLineItem
   parameters:
     - name: id
       in: path
