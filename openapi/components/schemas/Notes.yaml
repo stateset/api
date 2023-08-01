@@ -6,19 +6,19 @@ properties:
     description: The unique identifier for the note.
   title:
     type: string
-    nullable: true
+    
     description: The title of the note.
   body:
     type: string
-    nullable: true
+    
     description: The body of the note.
   created_date:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the note was created.
   last_modified_date:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the note was last modified.

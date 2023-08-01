@@ -1,0 +1,96 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Notes
+  summary: Get notes by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getNotesById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:notes
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Notess.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Note not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Notess
+  summary: Updated notes
+  description: This can only be done by the logged in user.
+  operationId: updateNotes
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:notes
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Notess.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Notess.yaml
+    description: Updated notes object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid notes supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Notes not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Notes
+  summary: Delete notes
+  description: This can only be done by the logged in return.
+  operationId: deleteNotes
+  parameters:
+    - name: id
+      in: path
+      description: The id of the notes that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:notes
+  responses:
+    '400':
+      description: Invalid notes supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Notes not found
+      $ref: ../components/responses/Problem.yaml

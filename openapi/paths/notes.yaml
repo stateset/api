@@ -1,0 +1,84 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Notes
+  summary: Get notes
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getNotes
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return accounts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:notes
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Notes.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Note not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Notes
+  summary: Create a new note
+  description: |
+    Create a new note.
+    This can only be done by the logged in.
+  operationId: createNote
+  security:
+    - main_auth:
+        - write:notes
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Notes.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Notes.yaml
+    description: Created note object
+    required: true
+  responses:
+    '201':
+      description: Note created
+    '400':
+      description: Invalid message supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

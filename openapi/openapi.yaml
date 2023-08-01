@@ -138,6 +138,10 @@ paths:
     $ref: paths/messages.yaml
   /messages/{id}:
     $ref: paths/messages_{id}.yaml
+  /notes:
+    $ref: paths/notes.yaml
+  /notes/{id}:
+    $ref: paths/notes_{id}.yaml
   /returns:
     $ref: paths/returns.yaml
   /returns/{id}:
