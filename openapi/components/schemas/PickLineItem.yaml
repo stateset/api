@@ -6,41 +6,41 @@ properties:
     description: The unique identifier of the pick line item.
   pick_number:
     type: integer
-    nullable: true
+    
     description: The pick number associated with the line item.
   status:
     type: string
-    nullable: true
+    
     description: The status of the pick line item.
   part_number:
     type: string
-    nullable: true
+    
     description: The part number of the item to be picked.
   part_name:
     type: string
-    nullable: true
+    
     description: The name of the item to be picked.
   quantity_to_pick:
     type: integer
-    nullable: true
+    
     description: The quantity of the item to be picked.
   quantity_picked:
     type: integer
-    nullable: true
+    
     description: The quantity of the item that has been picked.
   work_order_number:
     type: integer
-    nullable: true
+    
     description: The work order number associated with the item to be picked.
   pick_plan:
     type: string
-    nullable: true
+    
     description: The pick plan associated with the pick line item.
   commit_quantity:
     type: integer
-    nullable: true
+    
     description: The quantity of the item that has been committed for picking.
   commit_location:
     type: integer
-    nullable: true
+    
     description: The location to which the item has been committed for picking.

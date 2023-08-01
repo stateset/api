@@ -6,90 +6,90 @@ properties:
     description: The ID of the reconcile.
   number:
     type: integer
-    nullable: true
+    
     description: The number of the reconcile.
   site:
     type: string
-    nullable: true
+    
     description: The site of the reconcile.
   order_number:
     type: string
-    nullable: true
+    
     description: The order number of the reconcile.
   bill_number:
     type: string
-    nullable: true
+    
     description: The bill number of the reconcile.
   vendor:
     type: string
-    nullable: true
+    
     description: The vendor of the reconcile.
   vendor_so_number:
     type: string
-    nullable: true
+    
     description: The vendor SO number of the reconcile.
   terms:
     type: string
-    nullable: true
+    
     description: The terms of the reconcile.
   priority:
     type: string
-    nullable: true
+    
     description: The priority of the reconcile.
   assigned_user:
     type: string
-    nullable: true
+    
     description: The assigned user of the reconcile.
   type:
     type: string
-    nullable: true
+    
     description: The type of the reconcile.
   created_at:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the reconcile was created.
   updated_at:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the reconcile was last updated.
   completed_at:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the reconcile was completed.
   bill_date:
     type: string
     format: date
-    nullable: true
+    
     description: The bill date of the reconcile.
   bill_due_date:
     type: string
     format: date
-    nullable: true
+    
     description: The due date of the reconcile.
   billed_total_cost:
     type: integer
-    nullable: true
+    
     description: The total cost of the reconcile.
   landed_total_cost:
     type: integer
-    nullable: true
+    
     description: The landed cost of the reconcile.
   po_total_cost:
     type: integer
-    nullable: true
+    
     description: The PO total cost of the reconcile.
   bill_balance:
     type: integer
-    nullable: true
+    
     description: The balance of the reconcile.
   memo:
     type: string
-    nullable: true
+    
     description: The memo of the reconcile.
   categories:
     type: string
-    nullable: true
+    
     description: The categories of the reconcile.

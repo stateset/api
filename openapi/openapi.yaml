@@ -104,8 +104,6 @@ paths:
     $ref: paths/accounts.yaml
   /accounts/{id}:
     $ref: paths/accounts.yaml
-  /agreements:
-    $ref: paths/agreements.yaml
   /billofmaterials:
     $ref: paths/billofmaterials.yaml
   /billofmaterials/{id}:

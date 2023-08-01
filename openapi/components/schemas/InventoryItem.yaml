@@ -45,5 +45,5 @@ properties:
   restock_date:
     type: string
     format: date
-    nullable: true
+    
     description: The date when the inventory item is scheduled to be restocked.

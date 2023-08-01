@@ -8,64 +8,64 @@ properties:
     description: Name of the case.
   description:
     type: string
-    nullable: true
+    
     description: Description of the case.
   caseNumber:
     type: string
-    nullable: true
+    
     description: Number of the case.
   caseStatus:
     type: string
-    nullable: true
+    
     description: Status of the case.
   priority:
     type: string
-    nullable: true
+    
     description: Priority of the case.
   submitter:
     type: string
-    nullable: true
+    
     description: Name of the person who submitted the case.
   resolver:
     type: string
-    nullable: true
+    
     description: Name of the person assigned to resolve the case.
   account_id:
     type: string
-    nullable: true
+    
     description: ID of the account associated with the case.
   user_id:
     type: string
-    nullable: true
+    
     description: ID of the user associated with the case.
   contact_id:
     type: string
-    nullable: true
+    
     description: ID of the contact associated with the case.
   isClosed:
     type: boolean
-    nullable: true
+    
     description: Flag indicating whether the case is closed.
   isDeleted:
     type: boolean
-    nullable: true
+    
     description: Flag indicating whether the case is deleted.
   isEscalated:
     type: string
-    nullable: true
+    
     description: Flag indicating whether the case is escalated.
   createdDate:
     type: string
-    nullable: true
+    
     format: date-time
     description: Date and time when the case was created.
   vendor_id:
     type: string
-    nullable: true
+    
     description: ID of the vendor associated with the case.
   supplier_id:
     type: string
-    nullable: true
+    
     description: ID of the supplier associated with the case.
 required:
   - id

@@ -3,77 +3,77 @@ properties:
   id:
     type: string
     format: uuid
-    nullable: true
+    
   firstName:
     type: string
   lastName:
     type: string
-    nullable: true
+    
   email:
     type: string
-    nullable: true
+    
     format: email
   phone:
     type: string
-    nullable: true
+    
   controller:
     type: string
-    nullable: true
+    
   processor:
     type: string
-    nullable: true
+    
   status:
     type: string
-    nullable: true
+    
   user_id:
     type: string
-    nullable: true
+    
   description:
     type: string
-    nullable: true
+    
   title:
     type: string
-    nullable: true
+    
   createdAt:
     type: string
     format: date-time
-    nullable: true
+    
   company:
     type: string
-    nullable: true
+    
   account_id:
     type: string
-    nullable: true
+    
   address:
     type: string
-    nullable: true
+    
   created_by:
     type: string
-    nullable: true
+    
   email_opt_out:
     type: boolean
-    nullable: true
+    
   fax:
     type: string
-    nullable: true
+    
   fax_opt_out:
     type: boolean
-    nullable: true
+    
   industry:
     type: string
-    nullable: true
+    
   last_modified_by:
     type: string
-    nullable: true
+    
   lead_source:
     type: string
-    nullable: true
+    
   mobile:
     type: string
-    nullable: true
+    
   product_interest:
     type: string
-    nullable: true
+    
   rating:
     type: integer
-    nullable: true
+    

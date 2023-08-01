@@ -3,25 +3,25 @@ properties:
   actualCost:
     type: number
     format: float
-    nullable: true
+    
     description: The actual cost of the campaign.
   budgetedCost:
     type: number
     format: float
-    nullable: true
+    
     description: The budgeted cost of the campaign.
   description:
     type: string
-    nullable: true
+    
     description: The description of the campaign.
   expectedResponse:
     type: string
-    nullable: true
+    
     description: The expected response of the campaign.
   expectedRevenue:
     type: number
     format: float
-    nullable: true
+    
     description: The expected revenue of the campaign.
   name:
     type: string
@@ -30,32 +30,32 @@ properties:
   numberOfContacts:
     type: number
     format: float
-    nullable: true
+    
     description: The number of contacts associated with the campaign.
   numberOfConvertedLeads:
     type: number
     format: float
-    nullable: true
+    
     description: The number of converted leads associated with the campaign.
   numberOfLeads:
     type: number
     format: float
-    nullable: true
+    
     description: The number of leads associated with the campaign.
   startDate:
     type: string
-    nullable: true
+    
     description: The start date of the campaign.
   status:
     type: string
-    nullable: true
+    
     description: The status of the campaign.
   type:
     type: string
-    nullable: true
+    
     description: The type of the campaign.
   id:
     type: string
-    nullable: true
+    
     description: The ID of the campaign.
 required:

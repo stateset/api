@@ -10,64 +10,64 @@ properties:
     type: string
   account_id:
     type: string
-    nullable: true
+    
   opportunityStage:
     type: string
-    nullable: true
+    
   opportunityAmount:
     type: string
-    nullable: true
+    
   owner:
     type: string
-    nullable: true
+    
   user_id:
     type: string
-    nullable: true
+    
   description:
     type: string
-    nullable: true
+    
   closeDate:
     type: string
     format: date
-    nullable: true
+    
   amount:
     type: string
     format: money
-    nullable: true
+    
   fiscalQuarter:
     type: string
-    nullable: true
+    
   fiscalYear:
     type: string
-    nullable: true
+    
   isClosed:
     type: boolean
-    nullable: true
+    
   isPrivate:
     type: boolean
-    nullable: true
+    
   isWon:
     type: boolean
-    nullable: true
+    
   probability:
     type: number
-    nullable: true
+    
   type:
     type: string
-    nullable: true
+    
   campaign_id:
     type: string                        
-    nullable: true
+    
   pricelist_id:
     type: string
-    nullable: true
+    
   nextMeeting:
     type: string
     format: date
-    nullable: true
+    
   vendor_id:
     type: string
-    nullable: true
+    
   supplier_id:
     type: string
-    nullable: true
+    

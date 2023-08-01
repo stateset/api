@@ -6,42 +6,42 @@ properties:
     example: d0f0159c-ae4c-4e51-93f4-59ca8e4f5b5a
   number:
     type: integer
-    nullable: true
+    
     description: The pick number.
     example: 123
   work_order_number:
     type: integer
-    nullable: true
+    
     description: The work order number associated with the pick.
     example: 456
   bill_of_materials_number:
     type: integer
-    nullable: true
+    
     description: The bill of materials number associated with the pick.
     example: 789
   location:
     type: string
-    nullable: true
+    
     description: The location where the pick will take place.
     example: Warehouse A
   pick_method:
     type: string
-    nullable: true
+    
     description: The method used for the pick.
     example: Pick to cart
   date_created:
     type: string
     format: date
-    nullable: true
+    
     description: The date the pick was created.
     example: '2023-04-01'
   site:
     type: string
-    nullable: true
+    
     description: The site where the pick will take place.
     example: Site A
   status:
     type: string
-    nullable: true
+    
     description: The current status of the pick.
     example: Open
