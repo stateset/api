@@ -14,19 +14,19 @@ get:
   operationId: getAccountByName
   parameters:
     - name: limit
-      in: body
+      in: query
       description: The number of items to return
       required: true
       schema:
         type: number
     - name: offset
-      in: body
+      in: query
       description: Filter users without email
       required: true
       schema:
         type: number
     - name: order_direction
-      in: body
+      in: query
       description: Direction to return accounts
       required: true
       schema:
