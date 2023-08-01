@@ -122,7 +122,7 @@ paths:
     $ref: paths/returns.yaml
   /returns/{id}:
     $ref: paths/returns_{id}.yaml
-  /returnitems/:
+  /returnitems:
     $ref: paths/returnlineitems.yaml
   /returnitems/{id}:
     $ref: paths/returnlineitems_{id}.yaml
