@@ -1,16 +1,15 @@
 parameters:
-  - name: pretty_print
-    in: query
-    description: Pretty print response
+  - name: id
+    in: path
+    description: The id that needs to be fetched
+    required: true
     schema:
-      type: boolean
+      type: string
 get:
   tags:
     - Returns
   summary: Get return by id
-  description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+  description: Get return by id with all details and items
   operationId: getReturnById
   parameters:
     - name: id
