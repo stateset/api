@@ -5,68 +5,68 @@ properties:
     description: The unique identifier for the message
   body:
     type: string
-    nullable: true
+    
     description: The body of the message
   to:
     type: string
-    nullable: true
+    
     description: The recipient of the message
   from:
     type: string
-    nullable: true
+    
     description: The sender of the message
   sentReceipt:
     type: boolean
-    nullable: true
+    
     description: Indicates whether the message has been sent
   deliveredReceipt:
     type: boolean
-    nullable: true
+    
     description: Indicates whether the message has been delivered
   fromMe:
     type: boolean
-    nullable: true
+    
     description: Indicates whether the message is from the user
   user_id:
     type: string
-    nullable: true
+    
     description: The ID of the user associated with the message
   username:
     type: string
-    nullable: true
+    
     description: The username of the user associated with the message
   is_public:
     type: boolean
-    nullable: true
+    
     description: Indicates whether the message is public
   created_at:
     type: string
     format: date-time
-    nullable: true
+    
     description: The creation time of the message
   date:
     type: string
     format: date
-    nullable: true
+    
     description: The date of the message
   time:
     type: string
     format: time
-    nullable: true
+    
     description: The time of the message
   timestamp:
     type: string
-    nullable: true
+    
     description: The timestamp of the message
   messageNumber:
     type: integer
-    nullable: true
+    
     description: The message number
   isCode:
     type: boolean
-    nullable: true
+    
     description: Indicates whether the message is a code
   likes:
     type: integer
-    nullable: true
+    
     description: The number of likes for the message

@@ -1,0 +1,84 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Messages
+  summary: Get messages
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getMessages
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return accounts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:messages
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Message.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Message not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Messages
+  summary: Create a new message
+  description: |
+    Create a new message.
+    This can only be done by the logged in.
+  operationId: createMessage
+  security:
+    - main_auth:
+        - write:messages
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Message.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Message.yaml
+    description: Created message object
+    required: true
+  responses:
+    '201':
+      description: Message created
+    '400':
+      description: Invalid message supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

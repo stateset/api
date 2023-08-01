@@ -71,7 +71,7 @@ tags:
     description: Operations related to manufacturing orders.
   - name: Manufacture Order Line Items
     description: Operations related to manufacturing order line items.
-  - name: Message
+  - name: Messages
     description: Operations related to messages.
   - name: Notes
     description: Operations related to notes.
@@ -134,6 +134,10 @@ paths:
     $ref: paths/manufactureorderlineitems.yaml
   /manufactureorderitems/{id}:
     $ref: paths/manufactureorderlineitems_{id}.yaml
+  /messages:
+    $ref: paths/messages.yaml
+  /messages/{id}:
+    $ref: paths/messages_{id}_attachments.yaml
   /returns:
     $ref: paths/returns.yaml
   /returns/{id}:
