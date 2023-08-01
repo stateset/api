@@ -21,7 +21,7 @@ get:
         type: string
   security:
     - main_auth:
-        - read:warrantys
+        - read:warranties
     - api_key: []
   responses:
     '200':

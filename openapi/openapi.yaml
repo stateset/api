@@ -120,7 +120,7 @@ paths:
     $ref: paths/agreements.yaml
   /returns:
     $ref: paths/returns.yaml
-  /returnlineitems:
+  /returnitems:
     $ref: paths/returnlineitems.yaml
   /warranties:
     $ref: paths/warranties.yaml
@@ -132,6 +132,8 @@ paths:
     $ref: paths/accounts_{id}.yaml
   /returns/{id}:
     $ref: paths/returns_{id}.yaml
+  /returnitems/{id}:
+    $ref: paths/returnlineitems_{id}.yaml
   /workorders/{id}: 
     $ref: paths/workorders_{id}.yaml
 
