@@ -13,17 +13,24 @@ get:
     You can use `Markdown` here.
   operationId: getAccountByName
   parameters:
-    - name: name
-      in: path
-      description: The name that needs to be fetched
+    - name: limit
+      in: body
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: body
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: body
+      description: Direction to return accounts
       required: true
       schema:
         type: string
-    - name: with_email
-      in: query
-      description: Filter users without email
-      schema:
-        type: boolean
   security:
     - main_auth:
         - read:accounts
@@ -40,41 +47,6 @@ get:
             email: user@example.com
     '403':
       description: Forbidden
-      $ref: ../components/responses/Problem.yaml
-    '404':
-      description: Account not found
-      $ref: ../components/responses/Problem.yaml
-put:
-  tags:
-    - Account
-  summary: Updated account
-  description: This can only be done by the logged in account.
-  operationId: updateAccount
-  parameters:
-    - name: name
-      in: path
-      description: The account that needs to be updated
-      required: true
-      schema:
-        type: string
-  security:
-    - main_auth:
-        - write:accounts
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: ../components/schemas/Account.yaml
-      application/xml:
-        schema:
-          $ref: ../components/schemas/Account.yaml
-    description: Updated account object
-    required: true
-  responses:
-    '200':
-      description: OK
-    '400':
-      description: Invalid account supplied
       $ref: ../components/responses/Problem.yaml
     '404':
       description: Account not found

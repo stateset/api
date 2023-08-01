@@ -112,11 +112,7 @@ tags:
 
 servers:
   - url: https://api.stateset.com/v1
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
-  - url: https://{tenant}.stateset.com/v1
+    description: Production server
 paths:
   /accounts:
     $ref: paths/accounts.yaml
