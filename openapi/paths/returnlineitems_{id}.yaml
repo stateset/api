@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Return Line Item
+    - Return Line Items
   summary: Get return line item by id
   description: |
     Some description of the operation.
@@ -38,7 +38,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - Return Line Item
+    - Return Line Items
   summary: Updated return line item
   description: This can only be done by the logged in user.
   operationId: updateReturnLineItem

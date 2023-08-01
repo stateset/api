@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Return Line Item
+    - Return Line Items
   summary: Get returnItem by id
   description: |
     Some description of the operation.
