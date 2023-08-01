@@ -1,0 +1,73 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Work Order
+  summary: Get work order by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getWorkOrderById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:workorders
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/WorkOrder.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Work Order not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Work Order
+  summary: Updated work order
+  description: This can only be done by the logged in user.
+  operationId: updateWorkOrder
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:workorders
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/WorkOrder.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/WorkOrder.yaml
+    description: Updated work order object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid work order supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Work Order not found
+      $ref: ../components/responses/Problem.yaml

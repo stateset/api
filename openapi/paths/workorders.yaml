@@ -6,12 +6,12 @@ parameters:
       type: boolean
 get:
   tags:
-    -  Agreement
-  summary: Get agreement by agreement name
+    - Work Order
+  summary: Get account by work order id
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: get AgreementByName
+  operationId: getWorkOrdes
   parameters:
     - name: limit
       in: query
@@ -21,19 +21,19 @@ get:
         type: number
     - name: offset
       in: query
-      description: Filter users without email
+      description: Offset to return work orders
       required: true
       schema:
         type: number
     - name: order_direction
       in: query
-      description: Direction to return agreements
+      description: Direction to return work orders
       required: true
       schema:
         type: string
   security:
     - main_auth:
-        - read:agreements
+        - read:workorders
     - api_key: []
   responses:
     '200':
@@ -41,7 +41,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Agreement.yaml
+            $ref: ../components/schemas/WorkOrder.yaml
           example:
             name: riggsandporter.com
             email: user@example.com
@@ -49,5 +49,5 @@ get:
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Agreement not found
+      description: Work Order not found
       $ref: ../components/responses/Problem.yaml
