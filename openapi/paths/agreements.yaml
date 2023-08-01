@@ -11,7 +11,7 @@ get:
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: get AgreementByName
+  operationId: getAgreementByName
   parameters:
     - name: limit
       in: query

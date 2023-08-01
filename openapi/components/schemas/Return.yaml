@@ -85,7 +85,7 @@ properties:
     description: The category of the reason for the return.
     
   flat_rate_shipping:
-    type: numeric
+    type: integet
     description: The flat rate shipping amount.
     
   refunded_string:

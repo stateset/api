@@ -122,8 +122,6 @@ paths:
     $ref: paths/returns.yaml
   /returnlineitems:
     $ref: paths/returnlineitems.yaml
-  /users:
-    $ref: paths/users.yaml
   /workorders:
     $ref: paths/workorders.yaml
   /accounts/{id}:
