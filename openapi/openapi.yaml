@@ -120,20 +120,22 @@ paths:
     $ref: paths/agreements.yaml
   /returns:
     $ref: paths/returns.yaml
-  /returnitems:
-    $ref: paths/returnlineitems.yaml
-  /warranties:
-    $ref: paths/warranties.yaml
-  /warrantys/{id}:
-    $ref: paths/warranties_{id}.yaml
-  /workorders:
-    $ref: paths/workorders.yaml
-  /accounts/{id}:
-    $ref: paths/accounts_{id}.yaml
   /returns/{id}:
     $ref: paths/returns_{id}.yaml
+  /returnitems/:
+    $ref: paths/returnlineitems.yaml
   /returnitems/{id}:
     $ref: paths/returnlineitems_{id}.yaml
+  /warranties:
+    $ref: paths/warranties.yaml
+  /warranties/{id}:
+    $ref: paths/warranties_{id}.yaml
+  /warrantyitems:
+    $ref: paths/warrantylineitems.yaml
+  /warrantyitems/{id}:
+    $ref: paths/warrantylineitems_{id}.yaml
+  /workorders:
+    $ref: paths/workorders.yaml
   /workorders/{id}: 
     $ref: paths/workorders_{id}.yaml
 

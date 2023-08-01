@@ -5,90 +5,90 @@ properties:
     description: The unique identifier of the warranty
   status:
     type: string
-    nullable: true
+    
     description: The status of the warranty
   order_id:
     type: string
-    nullable: true
+    
     description: The unique identifier of the order associated with the warranty
   rma:
     type: string
-    nullable: true
+    
     description: The warranty merchandise authorization number
   tracking_number:
     type: string
-    nullable: true
+    
     description: The tracking number of the warrantyed item
   description:
     type: string
-    nullable: true
+    
     description: A description of the warranty
   customerEmail:
     type: string
-    nullable: true
+    
     description: The email address of the customer who initiated the warranty
   zendesk_number:
     type: string
-    nullable: true
+    
     description: The unique identifier of the Zendesk ticket associated with the warranty
   action_needed:
     type: string
-    nullable: true
+    
     description: Any action required to process the warranty
   issue:
     type: string
-    nullable: true
+    
     description: The reason for the warranty
   order_date:
     type: string
     format: date
-    nullable: true
+    
     description: The date the order was placed
   shipped_date:
     type: string
     format: date
-    nullable: true
+    
     description: The date the order was shipped
   requested_date:
     type: string
     format: date
-    nullable: true
+    
     description: The date the warranty was requested
   enteredBy:
     type: string
-    nullable: true
+    
     description: The name of the employee who entered the warranty into the system
   serial_number:
     type: string
-    nullable: true
+    
     description: The serial number of the warranty item
   condition:
     type: string
-    nullable: true
+    
     description: The condition of the warranty item
   customer_id:
     type: string
     format: uuid
-    nullable: true
+    
     description: The unique identifier of the customer who initiated the warranty
   amount:
     type: string
-    nullable: true
+    
     description: The total amount refunded for the warranty
   reported_condition:
     type: string
-    nullable: true
+    
     description: The condition of the item reported by the customer
   tax_refunded:
     type: string
-    nullable: true
+    
     description: The amount of tax refunded for the warranty
   total_refunded:
     type: string
-    nullable: true
+    
     description: The total amount refunded for the warranty, including tax
   created_date:
     type: string
     format: date
-    nullable: true
+    
     description: The date
