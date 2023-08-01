@@ -56,7 +56,7 @@ properties:
     description: The name of the employee who entered the return into the system.
     
   customer_id:
-    type: uuid
+    type: string
     description: The unique identifier of the customer who initiated the return.
     
   amount:
@@ -76,7 +76,7 @@ properties:
     description: The total amount refunded.
     
   created_string:
-    type: timestamp with time zone
+    type: string
     description: The string the return was created.
     
     default: now()
@@ -93,11 +93,11 @@ properties:
     description: The string the return was refunded.
     
   warehouse_received_string:
-    type: timestamp with time zone
+    type: string
     description: The string the return was received at the warehouse.
     
   warehouse_condition_string:
-    type: timestamp with time zone
+    type: string
     description: The string the condition of the return was verified at the warehouse.
 
   fedex_status:
