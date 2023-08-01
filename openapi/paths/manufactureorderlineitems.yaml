@@ -1,0 +1,52 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Manufacture Order Line Items
+  summary: Get manufactureItem by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getManufactureItemById
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to manufacture
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to manufacture accounts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:manufactureItems
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ManufactureItem.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: ManufactureItem not found
+      $ref: ../components/responses/Problem.yaml

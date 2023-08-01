@@ -67,9 +67,9 @@ tags:
     description: Operations related to invoices.
   - name: Leads
     description: Operations related to leads.
-  - name: ManufactureOrder
+  - name: Manufacture Orders
     description: Operations related to manufacturing orders.
-  - name: ManufactureOrderLineItem
+  - name: Manufacture Order Line Items
     description: Operations related to manufacturing order line items.
   - name: Message
     description: Operations related to messages.
@@ -122,6 +122,14 @@ paths:
     $ref: paths/billofmaterials.yaml
   /billofmaterials/{id}:
     $ref: paths/billofmaterials_{id}.yaml
+  /manufactureorders:
+    $ref: paths/manufactureorders.yaml
+  /manufactureorders/{id}:
+    $ref: paths/manufactureorders_{id}.yaml
+  /manufactureorderitems:
+    $ref: paths/manufactureorderlineitems.yaml
+  /manufactureorderitems/{id}:
+    $ref: paths/manufactureorderlineitems_{id}.yaml
   /returns:
     $ref: paths/returns.yaml
   /returns/{id}:
