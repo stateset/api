@@ -116,7 +116,7 @@ servers:
       tenant:
         default: www
         description: Your tenant id
-  - url: https://api.stateset.com/v1
+  - url: https://{tenant}.stateset.com/v1
 paths:
   /accounts:
     $ref: paths/accounts.yaml
@@ -258,8 +258,6 @@ paths:
     $ref: paths/workorders_{id}.yaml
   /workorderlineitems/{id}: 
     $ref: paths/workorderlineitems_{id}.yaml
-  /users/{username}:
-    $ref: paths/users_{username}.yaml
   /echo:
     $ref: paths/echo.yaml
   /pathItem:
