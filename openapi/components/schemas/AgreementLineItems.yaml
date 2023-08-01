@@ -1,0 +1,37 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The unique identifier for the agreement line item.
+  agreementLineItemName:
+    type: string
+    description: The name of the agreement line item.
+  agreementLineItemNumber:
+    type: string
+    description: The number associated with the agreement line item.
+  agreementLineItemHash:
+    type: string
+    description: The hash of the agreement line item.
+  agreementLineItemStatus:
+    type: string
+    description: The status of the agreement line item.
+  agreementLineItemType:
+    type: string
+    description: The type of the agreement line item.
+  agreementLineItemValue:
+    type: string
+    description: The value of the agreement line item.
+  agreementLineItemStartDate:
+    type: string
+    format: date
+    description: The start date of the agreement line item.
+  agreementLineItemEndDate:
+    type: string
+    format: date
+    description: The end date of the agreement line item.
+  agreementLineItemNotes:
+    type: string
+    description: The notes associated with the agreement line item.
+  agreementLineItemAttachments:
+    type: string
+    description: The attachments associated with the agreement line item.

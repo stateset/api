@@ -1,0 +1,21 @@
+type: object
+properties:
+  id: 
+    type: string
+    format: uuid
+    description: The unique identifier for the packing list item.
+  sku:
+    type: string
+    description: The SKU of the packing list item.
+  description:
+    type: string
+    description: The description of the packing list item.
+  quantity:
+    type: number
+    description: The quantity of the packing list item.
+  packing_list:
+    type: string
+    description: The packing list of the packing list item.
+  arrived:
+    type: boolean
+    description: The arrived of the packing list item.

@@ -20,3 +20,15 @@ theme:
         - lang: JavaScript
         - lang: PHP
         - lang: Python
+        - lang: Ruby
+        - lang: Java
+        - lang: C#
+        - lang: Go
+        - lang: C++
+        - lang: Rust
+        - lang: Swift
+        - lang: Kotlin
+        - lang: Scala
+        - lang: TypeScript
+        - lang: Dart
+

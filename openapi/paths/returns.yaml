@@ -78,3 +78,61 @@ put:
     '404':
       description: Return not found
       $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Return
+  summary: Delete return
+  description: This can only be done by the logged in return.
+  operationId: deleteReturn
+  parameters:
+    - name: id
+      in: path
+      description: The id of the return that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:returns
+  responses:
+    '400':
+      description: Invalid return supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Return
+  summary: Create a new return
+  description: |
+    Create a new return.
+    This can only be done by the logged in return.
+  operationId: createReturn
+  security:
+    - main_auth:
+        - write:returns
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Return.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Return.yaml
+    description: Created return object
+    required: true
+  responses:
+    '201':
+      description: Return created
+    '400':
+      description: Invalid return supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+
