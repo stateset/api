@@ -47,7 +47,7 @@ tags:
     description: Operations related to agreement line items.
   - name: Bill Of Materials
     description: Operations related to bill of materials.
-  - name: BillOfMaterialsLineItem
+  - name: Bill Of Materials Line Items
     description: Operations related to bill of materials line items.
   - name: Call
     description: Operations related to calls.
