@@ -3,7 +3,7 @@ properties:
   id:
     type: string
     description: The unique identifier for the work order.
-    
+
   number:
     type: integer
     
@@ -72,5 +72,3 @@ properties:
     type: integer
     
     description: The bill of materials number associated with the work order.
-  required:
-    - id
