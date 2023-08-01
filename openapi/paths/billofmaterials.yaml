@@ -68,7 +68,7 @@ post:
           $ref: ../components/schemas/BillOfMaterials.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/BillofMaterials.yaml
+          $ref: ../components/schemas/BillOfMaterials.yaml
     description: Created bill of materials object
     required: true
   responses:
