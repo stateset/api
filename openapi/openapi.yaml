@@ -39,12 +39,6 @@ info:
     interfaces have done for lower-level programming, OpenAPI removes the
     guesswork in calling the service.
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
   - name: Accounts
     description: Operations related to accounts.
   - name: Agreements
@@ -91,8 +85,6 @@ tags:
     description: Operations related to picks.
   - name: PickLineItem
     description: Operations related to pick line items.
-  - name: Problem
-    description: Operations related to problems.
   - name: Reconcile
     description: Operations related to reconciling.
   - name: ReconcileLineItem
@@ -126,10 +118,146 @@ servers:
         description: Your tenant id
   - url: https://api.stateset.com/v1
 paths:
+  /accounts:
+    $ref: paths/accounts.yaml
+  /agreements:
+    $ref: paths/agreements.yaml
+  /agreementlineitems: 
+    $ref: paths/agreementlineitems.yaml
+  /billofmaterials:
+    $ref: paths/billofmaterials.yaml
+  /billofmateriallineitems:
+    $ref: paths/billofmateriallineitems.yaml
+  /calls:
+    $ref: paths/calls.yaml
+  /campaigns:
+    $ref: paths/campaigns.yaml
+  /cases:
+    $ref: paths/cases.yaml
+  /contacts:
+    $ref: paths/contacts.yaml
+  /customers:
+    $ref: paths/customers.yaml
+  /cyclecounts:
+    $ref: paths/cyclecounts.yaml
+  /inventoryitems:
+    $ref: paths/inventoryitems.yaml
+  /invoices:
+    $ref: paths/invoices.yaml
+  /leads:
+    $ref: paths/leads.yaml
+  /manufactureorders:
+    $ref: paths/manufactureorders.yaml
+  /manufactureorderlineitems:
+    $ref: paths/manufactureorderlineitems.yaml
+  /messages:
+    $ref: paths/messages.yaml
+  /notes:
+    $ref: paths/notes.yaml
+  /opportunities:
+    $ref: paths/opportunities.yaml
+  /packinglists:
+    $ref: paths/packinglists.yaml
+  /packinglistitems:
+    $ref: paths/packinglistitems.yaml
+  /picks:
+    $ref: paths/picks.yaml
+  /picklineitems:
+    $ref: paths/picklineitems.yaml
+  /reconciles:
+    $ref: paths/reconciles.yaml
+  /reconcilelineitems:
+    $ref: paths/reconcilelineitems.yaml
   /returns:
     $ref: paths/returns.yaml
   /returnlineitems:
     $ref: paths/returnlineitems.yaml
+  /suppliers:
+    $ref: paths/suppliers.yaml
+  /tasks:
+    $ref: paths/tasks.yaml
+  /users:
+    $ref: paths/users.yaml
+  /vendors:
+    $ref: paths/vendors.yaml
+  /warranties:
+    $ref: paths/warranties.yaml
+  /warrantyitems:
+    $ref: paths/warrantyitems.yaml
+  /workorders:
+    $ref: paths/workorders.yaml
+  /workorderlineitems:
+    $ref: paths/workorderlineitems.yaml
+  /accounts/{id}:
+    $ref: paths/accounts_{id}.yaml
+  /agreements/{id}:
+    $ref: paths/agreements_{id}.yaml
+  /agreementlineitems/{id}:
+    $ref: paths/agreementlineitems_{id}.yaml
+  /billofmaterials/{id}:
+    $ref: paths/billofmaterials_{id}.yaml
+  /billofmateriallineitems/{id}:
+    $ref: paths/billofmateriallineitems_{id}.yaml
+  /calls/{id}:
+    $ref: paths/calls_{id}.yaml
+  /campaigns/{id}:
+    $ref: paths/campaigns_{id}.yaml
+  /cases/{id}:
+    $ref: paths/cases_{id}.yaml
+  /contacts/{id}:
+    $ref: paths/contacts_{id}.yaml
+  /customers/{id}:
+    $ref: paths/customers_{id}.yaml
+  /cyclecounts/{id}:
+    $ref: paths/cyclecounts_{id}.yaml
+  /inventoryitems/{id}:
+    $ref: paths/inventoryitems_{id}.yaml
+  /invoices/{id}:
+    $ref: paths/invoices_{id}.yaml
+  /leads/{id}:
+    $ref: paths/leads_{id}.yaml
+  /manufactureorders/{id}:
+    $ref: paths/manufactureorders_{id}.yaml
+  /manufactureorderlineitems/{id}:
+    $ref: paths/manufactureorderlineitems_{id}.yaml
+  /messages/{id}:
+    $ref: paths/messages_{id}.yaml
+  /notes/{id}:
+    $ref: paths/notes_{id}.yaml
+  /opportunities/{id}:
+    $ref: paths/opportunities_{id}.yaml
+  /packinglists/{id}:
+    $ref: paths/packinglists_{id}.yaml
+  /packinglistitems/{id}:
+    $ref: paths/packinglistitems_{id}.yaml
+  /picks/{id}:
+    $ref: paths/picks_{id}.yaml
+  /picklineitems/{id}:
+    $ref: paths/picklineitems_{id}.yaml
+  /reconciles/{id}:
+    $ref: paths/reconciles_{id}.yaml
+  /reconcilelineitems/{id}:
+    $ref: paths/reconcilelineitems_{id}.yaml
+  /returns/{id}:
+    $ref: paths/returns_{id}.yaml
+  /returnlineitems/{id}:
+    $ref: paths/returnlineitems_{id}.yaml
+  /suppliers/{id}:  
+    $ref: paths/suppliers_{id}.yaml
+  /tasks/{id}:  
+    $ref: paths/tasks_{id}.yaml
+  /users/{id}:
+    $ref: paths/users_{id}.yaml
+  /vendors/{id}:  
+    $ref: paths/vendors_{id}.yaml
+  /warranties/{id}:
+    $ref: paths/warranties_{id}.yaml
+  /warrantyitems/{id}:  
+    $ref: paths/warrantyitems_{id}.yaml
+  /workorders/{id}: 
+    $ref: paths/workorders_{id}.yaml
+  /workorderlineitems/{id}: 
+    $ref: paths/workorderlineitems_{id}.yaml
   /users/{username}:
     $ref: paths/users_{username}.yaml
   /echo:
