@@ -1,0 +1,73 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Bill Of Materials Line Items
+  summary: Get bill of materials line item by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getManufactureLineItemById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:billofmaterialslineitems
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ManufactureOrderLineItem.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Manufacture Line Item not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Bill Of Materials Line Items
+  summary: Updated billofmaterials line item
+  description: This can only be done by the logged in user.
+  operationId: updateManufactureLineItem
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:billofmaterialslineitems
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ManufactureOrderLineItem.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/ManufactureOrderLineItem.yaml
+    description: Updated reuturn object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid billofmaterials line item supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Manufacture Line Item not found
+      $ref: ../components/responses/Problem.yaml
