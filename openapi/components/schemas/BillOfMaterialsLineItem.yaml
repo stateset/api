@@ -7,36 +7,36 @@ properties:
     example: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
   part_number:
     type: string
-    nullable: true
+    
     description: The part number of the item.
     example: "12345"
   part_name:
     type: string
-    nullable: true
+    
     description: The name of the item.
     example: "Screw"
   quantity:
     type: integer
-    nullable: true
+    
     description: The quantity of the item required in the bill of materials.
     example: 50
   purchase_supply_type:
     type: string
-    nullable: true
+    
     description: The type of purchase/supply for the item.
     example: "Vendor"
   line_type:
     type: string
-    nullable: true
+    
     description: The type of line item in the bill of materials.
     example: "Raw Material"
   bill_of_materials_number:
     type: integer
-    nullable: true
+    
     description: The bill of materials number that this line item belongs to.
     example: 1
   status:
     type: string
-    nullable: true
+    
     description: The status of the line item.
     example: "Pending"

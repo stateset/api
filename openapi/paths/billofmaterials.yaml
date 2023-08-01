@@ -1,0 +1,84 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Bill of Materials
+  summary: Get bill of materials
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getBillofMaterials
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to bill of materials
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to bill of materials accounts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:bill of materials
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BillofMaterials.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Bill of Materials not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Bill of Materials
+  summary: Create a new bill of materials
+  description: |
+    Create a new bill of materials.
+    This can only be done by the logged in bill of materials.
+  operationId: createBillofMaterials
+  security:
+    - main_auth:
+        - write:billofmaterials
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/BillofMaterials.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/BillofMaterials.yaml
+    description: Created bill of materials object
+    required: true
+  responses:
+    '201':
+      description: Bill of Materials created
+    '400':
+      description: Invalid bill of materials supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

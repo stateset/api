@@ -6,31 +6,31 @@ properties:
     description: The unique identifier for the bill of materials.
   number:
     type: integer
-    nullable: true
+    
     description: The number of the bill of materials.
   name:
     type: string
-    nullable: true
+    
     description: The name of the bill of materials.
   valid:
     type: string
-    nullable: true
+    
     description: Whether or not the bill of materials is valid.
   groups:
     type: string
-    nullable: true
+    
     description: The groups associated with the bill of materials.
   created_at:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the bill of materials was created.
   updated_at:
     type: string
     format: date-time
-    nullable: true
+    
     description: The date and time the bill of materials was last updated.
   description:
     type: string
-    nullable: true
+    
     description: A description of the bill of materials.

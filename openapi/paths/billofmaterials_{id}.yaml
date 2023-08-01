@@ -1,0 +1,96 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Bill of Materials
+  summary: Get bill of materials by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getBillOfMaterialsById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:billofmaterials
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/BillOfMaterials.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Bill of Materials not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Bill of Materials
+  summary: Updated bill of materials
+  description: This can only be done by the logged in user.
+  operationId: updateBillOfMaterials
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:billofmaterials
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/BillOfMaterials.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/BillOfMaterials.yaml
+    description: Updated bill of materials object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid return supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Bill of Materials not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Bill of Materials
+  summary: Delete Bill of Materials
+  description: This can only be done by the logged in return.
+  operationId: deleteReturn
+  parameters:
+    - name: id
+      in: path
+      description: The id of the bill of materials that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:billofmaterials
+  responses:
+    '400':
+      description: Invalid return supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Bill Of Materials not found
+      $ref: ../components/responses/Problem.yaml

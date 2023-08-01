@@ -118,6 +118,10 @@ paths:
     $ref: paths/accounts.yaml
   /agreements:
     $ref: paths/agreements.yaml
+  /billofmaterials:
+    $ref: paths/billofmaterials.yaml
+  /billofmaterials/{id}:
+    $ref: paths/billofmaterials_{id}.yaml
   /returns:
     $ref: paths/returns.yaml
   /returns/{id}:
