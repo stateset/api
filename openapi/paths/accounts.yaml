@@ -41,7 +41,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Account.yaml
+            $ref: ../components/schemas/Accounts.yaml
           example:
             name: riggsandporter.com
             email: user@example.com

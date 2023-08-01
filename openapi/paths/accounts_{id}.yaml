@@ -29,7 +29,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Account.yaml
+            $ref: ../components/schemas/Accounts.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
@@ -56,10 +56,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Account.yaml
+          $ref: ../components/schemas/Accounts.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/Account.yaml
+          $ref: ../components/schemas/Accounts.yaml
     description: Updated account object
     required: true
   responses:
