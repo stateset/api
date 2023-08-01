@@ -137,7 +137,7 @@ paths:
   /messages:
     $ref: paths/messages.yaml
   /messages/{id}:
-    $ref: paths/messages_{id}_attachments.yaml
+    $ref: paths/messages_{id}.yaml
   /returns:
     $ref: paths/returns.yaml
   /returns/{id}:
