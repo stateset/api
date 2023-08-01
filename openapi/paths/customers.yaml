@@ -1,0 +1,53 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Customers
+  summary: Get customer by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getCustomers
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Offset to return customers
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return customers
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:customers
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Customers.yaml
+          example:
+            name: riggsandporter.com
+            email: user@example.com
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Manufacture Order not found
+      $ref: ../components/responses/Problem.yaml

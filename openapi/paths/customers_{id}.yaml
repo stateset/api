@@ -7,11 +7,11 @@ parameters:
 get:
   tags:
     - Notes
-  summary: Get notes by id
+  summary: Get customers by id
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getNotesById
+  operationId: getCustomersById
   parameters:
     - name: id
       in: path
@@ -21,7 +21,7 @@ get:
         type: string
   security:
     - main_auth:
-        - read:notes
+        - read:customers
     - api_key: []
   responses:
     '200':
@@ -29,7 +29,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Notes.yaml
+            $ref: ../components/schemas/Customers.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
@@ -38,10 +38,10 @@ get:
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - Notes
-  summary: Updated notes
+    - Customers
+  summary: Update customers
   description: This can only be done by the logged in user.
-  operationId: updateNotes
+  operationId: updateCustomers
   parameters:
     - name: id
       in: path
@@ -51,45 +51,45 @@ put:
         type: string
   security:
     - main_auth:
-        - write:notes
+        - write:customers
   requestBody:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Notes.yaml
+          $ref: ../components/schemas/Customers.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/Notes.yaml
-    description: Updated notes object
+          $ref: ../components/schemas/Customers.yaml
+    description: Updated customers object
     required: true
   responses:
     '200':
       description: OK
     '400':
-      description: Invalid notes supplied
+      description: Invalid customers supplied
       $ref: ../components/responses/Problem.yaml
     '404':
       description: Notes not found
       $ref: ../components/responses/Problem.yaml
 delete:
   tags:
-    - Notes
-  summary: Delete notes
+    - Customers
+  summary: Delete customers
   description: This can only be done by the logged in return.
-  operationId: deleteNotes
+  operationId: deleteCustomers
   parameters:
     - name: id
       in: path
-      description: The id of the notes that needs to be deleted
+      description: The id of the customers that needs to be deleted
       required: true
       schema:
         type: string
   security:
     - main_auth:
-        - write:notes
+        - write:customers
   responses:
     '400':
-      description: Invalid notes supplied
+      description: Invalid customers supplied
       $ref: ../components/responses/Problem.yaml
     '404':
       description: Notes not found

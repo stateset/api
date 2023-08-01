@@ -124,6 +124,10 @@ paths:
     $ref: paths/billofmaterials.yaml
   /billofmaterials/{id}:
     $ref: paths/billofmaterials_{id}.yaml
+  /customers:
+    $ref: paths/customers.yaml
+  /customers/{id}:
+    $ref: paths/customers_{id}.yaml
   /billofmaterialsitems:
     $ref: paths/billofmaterialslineitems.yaml
   /billofmaterialsitems/{id}:

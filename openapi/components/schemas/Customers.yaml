@@ -1,0 +1,32 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier of the customer.
+  sso_id:
+    type: string
+    description: The unique identifier of the customer in the SSO system.
+  activationDate:
+    type: string
+    format: date-time
+    description: The date and time the customer was activated.
+  email:
+    type: string
+    description: The email address of the customer.
+  firstName:
+    type: string
+    description: The first name of the customer.
+  lastName:
+    type: string
+    description: The last name of the customer.
+  phone:
+    type: string
+    description: The phone number of the customer.
+  stripe_customer_id:
+    type: string
+    description: The unique identifier of the customer in the Stripe system.
+  timestamp:
+    type: string
+    format: date-time
+    description: The date and time the customer was created.
