@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Warranty
+    - Warranties
   summary: Get warranties
   description: |
     Some description of the operation.
@@ -52,7 +52,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 post:
   tags:
-    - Warranty
+    - Warranties
   summary: Create a new warranty
   description: |
     Create a new return.

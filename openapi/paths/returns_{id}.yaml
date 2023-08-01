@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Return
+    - Returns
   summary: Get return by id
   description: |
     Some description of the operation.
@@ -38,7 +38,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - Return
+    - Returns
   summary: Updated return
   description: This can only be done by the logged in user.
   operationId: updateReturn
@@ -73,7 +73,7 @@ put:
       $ref: ../components/responses/Problem.yaml
 delete:
   tags:
-    - Return
+    - Returns
   summary: Delete return
   description: This can only be done by the logged in return.
   operationId: deleteReturn

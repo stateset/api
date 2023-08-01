@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Return
+    - Returns
   summary: Get returns
   description: |
     Some description of the operation.
@@ -52,7 +52,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 post:
   tags:
-    - Return
+    - Returns
   summary: Create a new return
   description: |
     Create a new return.

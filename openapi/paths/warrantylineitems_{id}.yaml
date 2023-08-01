@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Warranty Line Item
+    - Warranty Line Items
   summary: Get warranty line item by id
   description: |
     Some description of the operation.
@@ -38,7 +38,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - Warranty Line Item
+    - Warranty Line Items
   summary: Updated warranty line item
   description: This can only be done by the logged in user.
   operationId: updateWarrantyLineItem

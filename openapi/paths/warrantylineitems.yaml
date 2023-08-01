@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Warranty Line Item
+    - Warranty Line Items
   summary: Get warrantyItem by id
   description: |
     Some description of the operation.

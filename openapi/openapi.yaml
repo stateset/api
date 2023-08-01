@@ -45,7 +45,7 @@ tags:
     description: Operations related to agreements.
   - name: AgreementLineItems
     description: Operations related to agreement line items.
-  - name: BillOfMaterials
+  - name: Bill Of Materials
     description: Operations related to bill of materials.
   - name: BillOfMaterialsLineItem
     description: Operations related to bill of materials line items.
@@ -89,9 +89,9 @@ tags:
     description: Operations related to reconciling.
   - name: ReconcileLineItem
     description: Operations related to reconcile line items.
-  - name: Return
+  - name: Returns
     description: Operations related to returns.
-  - name: ReturnItem
+  - name: Return Line Items
     description: Operations related to return items.
   - name: Suppliers
     description: Operations related to suppliers.
@@ -101,13 +101,13 @@ tags:
     description: Operations related to users.
   - name: Vendors
     description: Operations related to vendors.
-  - name: Warranty
+  - name: Warranties
     description: Operations related to warranties.
-  - name: WarrantyItem
+  - name: Warranty Line Items
     description: Operations related to warranty items.
-  - name: WorkOrder
+  - name: Work Orders
     description: Operations related to work orders.
-  - name: WorkOrderLineItem
+  - name: Work Order Line Items
     description: Operations related to work order line items.
 
 servers:

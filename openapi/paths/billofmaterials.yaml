@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - Bill of Materials
+    - Bill Of Materials
   summary: Get bill of materials
   description: |
     Some description of the operation.
@@ -52,7 +52,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 post:
   tags:
-    - Bill of Materials
+    - Bill Of Materials
   summary: Create a new bill of materials
   description: |
     Create a new bill of materials.
