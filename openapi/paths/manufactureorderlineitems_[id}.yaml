@@ -29,7 +29,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/ManufactureItem.yaml
+            $ref: ../components/schemas/ManufactureOrderLineItem.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
@@ -56,10 +56,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/ManufactureItem.yaml
+          $ref: ../components/schemas/ManufactureOrderLineItem.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/ManufactureItem.yaml
+          $ref: ../components/schemas/ManufactureOrderLineItem.yaml
     description: Updated reuturn object
     required: true
   responses:
