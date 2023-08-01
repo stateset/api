@@ -116,6 +116,8 @@ servers:
 paths:
   /accounts:
     $ref: paths/accounts.yaml
+  /accounts/{id}:
+    $ref: paths/accounts.yaml
   /agreements:
     $ref: paths/agreements.yaml
   /billofmaterials:
@@ -162,6 +164,10 @@ paths:
     $ref: paths/workorders.yaml
   /workorders/{id}: 
     $ref: paths/workorders_{id}.yaml
+  /workorderitems:
+    $ref: paths/workorderlineitems.yaml
+  /workorderitems/{id}:
+    $ref: paths/workorderlineitems_{id}.yaml
 
 components:
   securitySchemes:

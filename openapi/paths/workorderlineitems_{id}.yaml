@@ -6,12 +6,12 @@ parameters:
       type: boolean
 get:
   tags:
-    - Accounts
-  summary: Get account by id
+    - Work Order Line Items
+  summary: Get work line item by id
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getAccountById
+  operationId: getWorkLineItemById
   parameters:
     - name: id
       in: path
@@ -21,7 +21,7 @@ get:
         type: string
   security:
     - main_auth:
-        - read:accounts
+        - read:worklineitems
     - api_key: []
   responses:
     '200':
@@ -29,19 +29,19 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Account.yaml
+            $ref: ../components/schemas/WorkOrderLineItems.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Account not found
+      description: Work Line Item not found
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - Accounts
-  summary: Updated account
+    - Work Order Line Items
+  summary: Updated work line item
   description: This can only be done by the logged in user.
-  operationId: updateAccount
+  operationId: updateWorkLineItem
   parameters:
     - name: id
       in: path
@@ -51,23 +51,23 @@ put:
         type: string
   security:
     - main_auth:
-        - write:accounts
+        - write:worklineitems
   requestBody:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Account.yaml
+          $ref: ../components/schemas/WorkOrderLineItems.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/Account.yaml
-    description: Updated account object
+          $ref: ../components/schemas/WorkOrderLineItems.yaml
+    description: Updated reuturn object
     required: true
   responses:
     '200':
       description: OK
     '400':
-      description: Invalid account supplied
+      description: Invalid work line item supplied
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Account not found
+      description: Work Line Item not found
       $ref: ../components/responses/Problem.yaml

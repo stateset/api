@@ -6,16 +6,16 @@ parameters:
       type: boolean
 get:
   tags:
-    - Accounts
-  summary: Get account by account name
+    - Work Order Line Items
+  summary: Get work order item by id
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getAccountByName
+  operationId: getWorkItemById
   parameters:
     - name: limit
       in: query
-      description: The number of items to return
+      description: The number of items
       required: true
       schema:
         type: number
@@ -27,13 +27,13 @@ get:
         type: number
     - name: order_direction
       in: query
-      description: Direction to return accounts
+      description: diretions to return work order items
       required: true
       schema:
         type: string
   security:
     - main_auth:
-        - read:accounts
+        - read:workItems
     - api_key: []
   responses:
     '200':
@@ -41,13 +41,12 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Account.yaml
+            $ref: ../components/schemas/WorkOrderLineItems.yaml
           example:
-            name: riggsandporter.com
-            email: user@example.com
+            id: 321313221231
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Account not found
+      description: Work Order Item not found
       $ref: ../components/responses/Problem.yaml

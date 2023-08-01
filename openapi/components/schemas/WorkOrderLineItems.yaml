@@ -6,29 +6,29 @@ properties:
     description: The unique identifier for the work order line item.
   part_number:
     type: string
-    nullable: true
+
     description: The part number for the line item.
   part_name:
     type: string
-    nullable: true
+    
     description: The name of the part for the line item.
   line_type:
     type: string
-    nullable: true
+    
     description: The type of line item.
   line_status:
     type: string
-    nullable: true
+    
     description: The status of the line item.
   unit_quantity:
     type: integer
-    nullable: true
+    
     description: The quantity per unit of the line item.
   total_quantity:
     type: integer
-    nullable: true
+    
     description: The total quantity of the line item.
   work_order_number:
     type: integer
-    nullable: true
+    
     description: The work order number associated with the line item.
