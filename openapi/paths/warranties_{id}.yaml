@@ -1,0 +1,96 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Warranty
+  summary: Get warranty by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getWarrantyById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:warrantys
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Warranty.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: User not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Warranty
+  summary: Updated warranty
+  description: This can only be done by the logged in user.
+  operationId: updateWarranty
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:warranties
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Warranty.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Warranty.yaml
+    description: Updated reuturn object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid warranty supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Warranty not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Warranty
+  summary: Delete warranty
+  description: This can only be done by the logged in warranty.
+  operationId: deleteWarranty
+  parameters:
+    - name: id
+      in: path
+      description: The id of the warranty that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:warranties
+  responses:
+    '400':
+      description: Invalid warranty supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Warranty not found
+      $ref: ../components/responses/Problem.yaml

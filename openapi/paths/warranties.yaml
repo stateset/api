@@ -1,0 +1,84 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Warranty
+  summary: Get warranties
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getWarranties
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return warranties
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:warranties
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Warranty.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Warranty
+  summary: Create a new warranty
+  description: |
+    Create a new return.
+    This can only be done by the logged in return.
+  operationId: createReturn
+  security:
+    - main_auth:
+        - write:warranties
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Warranty.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Warranty.yaml
+    description: Created warranty object
+    required: true
+  responses:
+    '201':
+      description: Warranty created
+    '400':
+      description: Invalid warranty supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

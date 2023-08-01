@@ -122,6 +122,10 @@ paths:
     $ref: paths/returns.yaml
   /returnlineitems:
     $ref: paths/returnlineitems.yaml
+  /warranties:
+    $ref: paths/warranties.yaml
+  /warrantys/{id}:
+    $ref: paths/warranties_{id}.yaml
   /workorders:
     $ref: paths/workorders.yaml
   /accounts/{id}:
