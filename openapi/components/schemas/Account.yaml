@@ -3,119 +3,121 @@ properties:
   id:
     type: string
     description: The unique identifier for the account.
+    
   accountName:
     type: string
     description: The name of the account.
+    example: "Acme Corp"
+
   accountType:
     type: string
-    nullable: true
     description: The type of account.
+    example: "Customer"
+
   industry:
     type: string
-    nullable: true
     description: The industry the account belongs to.
+    example: "Manufacturing"
+
   rating:
     type: string
-    nullable: true
     description: The rating of the account.
+    example: "Hot"
+
   phone:
     type: string
-    nullable: true
     description: The phone number of the account.
-  contact_id:
-    type: string
-    nullable: true
-    description: The ID of the contact person for the account.
+    example: "555-555-5555"
+
   created_at:
     type: string
     format: date-time
-    nullable: true
     default: now()
     description: The date and time when the account was created.
+
   is_public:
     type: boolean
-    nullable: true
     description: Whether the account is public or private.
+
   controller:
     type: string
-    nullable: true
     description: The controller of the account.
+
   processor:
     type: string
-    nullable: true
+
     description: The processor of the account.
   is_active:
     type: boolean
-    nullable: true
+    
     description: Whether the account is active or not.
   user_id:
     type: string
-    nullable: true
+    
     description: The ID of the user who created the account.
   order_id:
     type: string
-    nullable: true
+    
     description: The ID of the order associated with the account.
   accountNotes:
     type: string
-    nullable: true
+    
     description: Any notes or comments associated with the account.
   annualRevenue:
     type: integer
-    nullable: true
+    
     description: The annual revenue of the account.
   billingCity:
     type: string
-    nullable: true
+    
     description: The city for the account's billing address.
   billingCountry:
     type: string
-    nullable: true
+    
     description: The country for the account's billing address.
   billingLatitude:
     type: string
-    nullable: true
+    
     description: The latitude for the account's billing address.
   billingLongitude:
     type: string
-    nullable: true
+    
     description: The longitude for the account's billing address.
   billingState:
     type: string
-    nullable: true
+    
     description: The state or province for the account's billing address.
   billingStreet:
     type: string
-    nullable: true
+    
     description: The street address for the account's billing address.
   numberOfEmployees:
     type: number
-    nullable: true
+    
     description: The number of employees for the account.
   ownership:
     type: string
-    nullable: true
+    
     description: The ownership status of the account.
   shippingCity:
     type: string
-    nullable: true
+    
     description: The city for the account's shipping address.
   shippingCountry:
     type: string
-    nullable: true
+    
     description: The country for the account's shipping address.
   shippingLatitude:
     type: string
-    nullable: true
+    
     description: The latitude for the account's shipping address.
   shippingLongitude:
     type: string
-    nullable: true
+    
     description: The longitude for the account's shipping address.
   shippingState:
     type: string
-    nullable: true
+    
     description: The state or province for the account's shipping address.
   shippingStreet:
     type: string
-    nullable:
