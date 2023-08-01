@@ -29,7 +29,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Notess.yaml
+            $ref: ../components/schemas/Notes.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
@@ -56,10 +56,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Notess.yaml
+          $ref: ../components/schemas/Notes.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/Notess.yaml
+          $ref: ../components/schemas/Notes.yaml
     description: Updated notes object
     required: true
   responses:
