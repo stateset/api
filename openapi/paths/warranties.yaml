@@ -57,7 +57,7 @@ post:
   description: |
     Create a new return.
     This can only be done by the logged in return.
-  operationId: createReturn
+  operationId: createWarranty
   security:
     - main_auth:
         - write:warranties

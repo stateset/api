@@ -2,7 +2,7 @@ type: object
 properties:
   id:
     type: string
-    format: uuid
+    format: string
   warrantyNumber:
     type: string
   warrantyName:
