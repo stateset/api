@@ -41,10 +41,6 @@ info:
 tags:
   - name: Accounts
     description: Operations related to accounts.
-  - name: Agreements
-    description: Operations related to agreements.
-  - name: AgreementLineItems
-    description: Operations related to agreement line items.
   - name: Bill Of Materials
     description: Operations related to bill of materials.
   - name: Bill Of Materials Line Items
@@ -75,8 +71,6 @@ tags:
     description: Operations related to messages.
   - name: Notes
     description: Operations related to notes.
-  - name: Opportunity
-    description: Operations related to opportunities.
   - name: PackingList
     description: Operations related to packing lists.
   - name: PackingListItem
@@ -85,10 +79,6 @@ tags:
     description: Operations related to picks.
   - name: PickLineItem
     description: Operations related to pick line items.
-  - name: Reconcile
-    description: Operations related to reconciling.
-  - name: ReconcileLineItem
-    description: Operations related to reconcile line items.
   - name: Returns
     description: Operations related to returns.
   - name: Return Line Items
