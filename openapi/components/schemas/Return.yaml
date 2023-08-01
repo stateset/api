@@ -1,110 +1,145 @@
 type: object
 properties:
   id:
-    type: text
+    type: string
     primary_key: true
     unique: true
+
   status:
-    type: text
-    nullable: true
+    type: string
+    description: The status of the return.
+    
   order_id:
-    type: text
-    nullable: true
+    type: string
+    description: The order ID associated with the return.
+    
   rma:
-    type: text
-    nullable: true
+    type: string
+    description: The return merchandise authorization number.
+    
   tracking_number:
-    type: text
-    nullable: true
+    type: string
+    description: The tracking number of the returned item.
+
   description:
-    type: text
-    nullable: true
+    type: string
+    description: A description of the return.
+    
   customer_email:
-    type: text
-    nullable: true
+    type: string
+    description: The email address of the customer who initiated the return.
+    
   zendesk_number:
-    type: text
-    nullable: true
+    type: string
+    description: The unique identifier of the Zendesk ticket associated with the return.
+    
   action_needed:
-    type: text
-    nullable: true
+    type: string
+    description: Any action required to process the return.
+    
   issue:
-    type: text
-    nullable: true
+    type: string
+    description: The reason for the return.
+    
   order_date:
     type: date
-    nullable: true
+    description: The date the order was placed.
+    
   shipped_date:
     type: date
-    nullable: true
+    description: The date the order was shipped.
+    
   requested_date:
     type: date
-    nullable: true
+    description: The date the return was requested.
+    
   enteredBy:
-    type: text
-    nullable: true
+    type: string
+    description: The name of the employee who entered the return into the system.
+    
   customer_id:
     type: uuid
-    nullable: true
+    description: The unique identifier of the customer who initiated the return.
+    
   amount:
-    type: text
-    nullable: true
+    type: string
+    description: The amount of the return.
+    
   reported_condition:
-    type: text
-    nullable: true
+    type: string
+    description: The condition of the returned item.
+    
   tax_refunded:
-    type: text
-    nullable: true
+    type: string
+    description: The amount of tax refunded.
+    
   total_refunded:
-    type: text
-    nullable: true
+    type: string
+    description: The total amount refunded.
+    
   created_date:
     type: timestamp with time zone
-    nullable: true
+    description: The date the return was created.
+    
     default: now()
   reason_category:
-    type: text
-    nullable: true
+    type: string
+    description: The category of the reason for the return.
+    
   flat_rate_shipping:
     type: numeric
-    nullable: true
+    description: The flat rate shipping amount.
+    
   refunded_date:
     type: date
-    nullable: true
+    description: The date the return was refunded.
+    
   warehouse_received_date:
     type: timestamp with time zone
-    nullable: true
+    description: The date the return was received at the warehouse.
+    
   warehouse_condition_date:
     type: timestamp with time zone
-    nullable: true
+    description: The date the condition of the return was verified at the warehouse.
+
   fedex_status:
-    type: text
-    nullable: true
+    type: string
+    description: The status of the return in FedEx.
+    
   scanned_serial_number:
-    type: text
-    nullable: true
+    type: string
+    description: The serial number of the returned item.
+    
   match:
-    type: text
-    nullable: true
+    type: string
+    description: Whether or not the serial number matches the order.
+    
   country:
-    type: text
-    nullable: true
+    type: string
+    description: The country of the customer who initiated the return.
+
   serial_number:
-    type: text
-    nullable: true
+    type: string
+    description: The serial number of the returned item.
+    
   condition:
-    type: text
-    nullable: true
+    type: string
+    description: The condition of the returned item.
+    
   order_refunded:
     type: boolean
-    nullable: true
+    description: Whether or not the order was refunded.
+    
     default: false
   workflow_id:
-    type: text
-    nullable: true
+    type: string
+    description: The workflow ID associated with the return.
+    
   sso_id:
     type: uuid
-    nullable: true
+    description: The unique identifier of the SSO user who initiated the return.
+    
   customer_email_normalized:
-    type: text
-    nullable: true
+    type: string
+    description: The normalized email address of the customer who initiated the return.
+    

@@ -71,3 +71,26 @@ put:
     '404':
       description: Return not found
       $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Return
+  summary: Delete return
+  description: This can only be done by the logged in return.
+  operationId: deleteReturn
+  parameters:
+    - name: id
+      in: path
+      description: The id of the return that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:returns
+  responses:
+    '400':
+      description: Invalid return supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml

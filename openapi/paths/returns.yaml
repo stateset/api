@@ -7,23 +7,30 @@ parameters:
 get:
   tags:
     - Return
-  summary: Get return by id
+  summary: Get returns
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getReturnById
+  operationId: getReturns
   parameters:
-    - name: id
-      in: path
-      description: The id that needs to be fetched
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return accounts
       required: true
       schema:
         type: string
-    - name: with_id
-      in: query
-      description: Filter returns without id
-      schema:
-        type: boolean
   security:
     - main_auth:
         - read:returns
