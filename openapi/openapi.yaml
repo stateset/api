@@ -122,6 +122,10 @@ paths:
     $ref: paths/billofmaterials.yaml
   /billofmaterials/{id}:
     $ref: paths/billofmaterials_{id}.yaml
+  /billofmaterialsitems:
+    $ref: paths/billofmaterialslineitems.yaml
+  /billofmaterialsitems/{id}:
+    $ref: paths/billofmaterialslineitems_{id}.yaml
   /manufactureorders:
     $ref: paths/manufactureorders.yaml
   /manufactureorders/{id}:
