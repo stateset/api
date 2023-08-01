@@ -41,7 +41,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/BillofMaterials.yaml
+            $ref: ../components/schemas/BillOfMaterials.yaml
           example:
             id: 321313221231
     '403':
@@ -65,7 +65,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/BillofMaterials.yaml
+          $ref: ../components/schemas/BillOfMaterials.yaml
       application/xml:
         schema:
           $ref: ../components/schemas/BillofMaterials.yaml

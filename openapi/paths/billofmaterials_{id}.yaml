@@ -76,7 +76,7 @@ delete:
     - Bill of Materials
   summary: Delete Bill of Materials
   description: This can only be done by the logged in return.
-  operationId: deleteReturn
+  operationId: deleteBillOfMaterials
   parameters:
     - name: id
       in: path
