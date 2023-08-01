@@ -2,10 +2,10 @@ openapi: 3.1.0
 info:
   version: 1.0.0
   title: Stateset
-  termsOfService: https://stateset.io/terms/
+  termsOfService: https://stateset.com/terms/
   contact:
-    email: developers@stateset.io
-    url: http://stateset.io/support
+    email: developers@stateset.com
+    url: http://stateset.com/support
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -119,13 +119,17 @@ tags:
     description: Operations related to work order line items.
 
 servers:
-  - url: https://{tenant}/api/v1
+  - url: https://api.stateset.com/v1
     variables:
       tenant:
         default: www
         description: Your tenant id
-  - url: https://example.com/api/v1
+  - url: https://api.stateset.com/v1
 paths:
+  /returns:
+    $ref: paths/returns.yaml
+  /returnlineitems:
+    $ref: paths/returnlineitems.yaml
   /users/{username}:
     $ref: paths/users_{username}.yaml
   /echo:
@@ -140,7 +144,7 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: http://example.com/api/oauth/dialog
+          authorizationUrl: https://api.stateset.com/v1/oauth/dialog
           scopes:
             read:users: read users info
             write:users: modify or remove users
@@ -151,3 +155,4 @@ components:
     basic_auth:
       type: http
       scheme: basic
+
