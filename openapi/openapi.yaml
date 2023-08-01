@@ -10,7 +10,7 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
-    url: https://stateset.io/statesetbluelogo.svg
+    url: https://stateset.io/stateset_logo_8.png
   description: >
     This is an **example** API to demonstrate features of the OpenAPI
     specification.
@@ -45,10 +45,6 @@ tags:
     description: Operations related to bill of materials.
   - name: Bill Of Materials Line Items
     description: Operations related to bill of materials line items.
-  - name: Call
-    description: Operations related to calls.
-  - name: Campaigns
-    description: Operations related to campaigns.
   - name: Case
     description: Operations related to cases.
   - name: Contacts
