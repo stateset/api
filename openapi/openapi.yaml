@@ -47,10 +47,8 @@ tags:
     description: Operations related to customers.
   - name: CycleCount
     description: Operations related to cycle counts.
-  - name: InventoryItem
+  - name: Inventory Items
     description: Operations related to inventory items.
-  - name: Invoice
-    description: Operations related to invoices.
   - name: Leads
     description: Operations related to leads.
   - name: Manufacture Orders
@@ -75,8 +73,6 @@ tags:
     description: Operations related to return items.
   - name: Suppliers
     description: Operations related to suppliers.
-  - name: Task
-    description: Operations related to tasks.
   - name: User
     description: Operations related to users.
   - name: Vendors
@@ -110,6 +106,10 @@ paths:
     $ref: paths/billofmaterialslineitems.yaml
   /billofmaterialsitems/{id}:
     $ref: paths/billofmaterialslineitems_{id}.yaml
+  /inventoryitems:
+    $ref: paths/inventoryitems.yaml
+  /inventoryitems/{id}:
+    $ref: paths/inventoryitems_{id}.yaml
   /manufactureorders:
     $ref: paths/manufactureorders.yaml
   /manufactureorders/{id}:

@@ -1,0 +1,96 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Inventory Items
+  summary: Get inventory items by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getInventoryItemById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:inventoryitems
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/InventoryItems.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Note not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Inventory Items
+  summary: Updated inventory items
+  description: This can only be done by the logged in user.
+  operationId: updateInventoryItem
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:inventoryitems
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/InventoryItems.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Notes.yaml
+    description: Updated inventory items object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid inventory items supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Notes not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Notes
+  summary: Delete Inventory Items
+  description: This can only be done by the logged in return.
+  operationId: deleteInventoryItem
+  parameters:
+    - name: id
+      in: path
+      description: The id of the inventory items that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:inventoryitems
+  responses:
+    '400':
+      description: Invalid inventory items supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Notes not found
+      $ref: ../components/responses/Problem.yaml

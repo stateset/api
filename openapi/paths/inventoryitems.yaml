@@ -1,0 +1,84 @@
+parameters:
+  - name: pretty_print
+    in: query
+    description: Pretty print response
+    schema:
+      type: boolean
+get:
+  tags:
+    - Inventory Items
+  summary: Get inventory items
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getInventoryItems
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return accounts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:inventory items
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/InventoryItems.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Inventory Items not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Inventory Items
+  summary: Create a new inventory items
+  description: |
+    Create a new inventory items.
+    This can only be done by the logged in.
+  operationId: createInventoryItems
+  security:
+    - main_auth:
+        - write:inventory itemss
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/InventoryItems.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/InventoryItems.yaml
+    description: Created inventory items object
+    required: true
+  responses:
+    '201':
+      description: Inventory Items created
+    '400':
+      description: Invalid message supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+
