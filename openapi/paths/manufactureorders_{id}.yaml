@@ -6,12 +6,12 @@ parameters:
       type: boolean
 get:
   tags:
-    - Work Orders
-  summary: Get work order by id
+    - Manufacture Orders
+  summary: Get manufacture order by id
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getWorkOrderById
+  operationId: getManufactureOrderById
   parameters:
     - name: id
       in: path
@@ -21,7 +21,7 @@ get:
         type: string
   security:
     - main_auth:
-        - read:workorders
+        - read:manufactureorders
     - api_key: []
   responses:
     '200':
@@ -29,19 +29,19 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/WorkOrder.yaml
+            $ref: ../components/schemas/ManufactureOrder.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Work Order not found
+      description: Manufacture Order not found
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - Work Orders
-  summary: Updated work order
+    - Manufacture Orders
+  summary: Updated manufacture order
   description: This can only be done by the logged in user.
-  operationId: updateWorkOrder
+  operationId: updateManufactureOrder
   parameters:
     - name: id
       in: path
@@ -51,23 +51,23 @@ put:
         type: string
   security:
     - main_auth:
-        - write:workorders
+        - write:manufactureorders
   requestBody:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/WorkOrder.yaml
+          $ref: ../components/schemas/ManufactureOrder.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/WorkOrder.yaml
-    description: Updated work order object
+          $ref: ../components/schemas/ManufactureOrder.yaml
+    description: Updated manufacture order object
     required: true
   responses:
     '200':
       description: OK
     '400':
-      description: Invalid work order supplied
+      description: Invalid manufacture order supplied
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Work Order not found
+      description: Manufacture Order not found
       $ref: ../components/responses/Problem.yaml

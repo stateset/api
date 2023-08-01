@@ -6,58 +6,58 @@ properties:
     description: Unique identifier for the Manufacture Order Line Item.
   line_type:
     type: string
-    nullable: true
+    
     description: The type of the manufacture order line item.
   output_type:
     type: string
-    nullable: true
+    
     description: The type of output of the manufacture order line item.
   line_status:
     type: string
-    nullable: true
+    
     description: The status of the manufacture order line item.
   part_number:
     type: string
-    nullable: true
+    
     description: The part number of the manufacture order line item.
   part_name:
     type: string
-    nullable: true
+    
     description: The name of the part of the manufacture order line item.
   expected_date:
     type: string
     format: date
-    nullable: true
+    
     description: The expected completion date of the manufacture order line item.
   quantity:
     type: integer
-    nullable: true
+    
     description: The quantity of the manufacture order line item.
   work_order_number:
     type: integer
-    nullable: true
+    
     description: The work order number of the manufacture order line item.
   site:
     type: string
-    nullable: true
+    
     description: The site where the manufacture order line item is to be produced.
   yield_location:
     type: string
-    nullable: true
+    
     description: The location where the yield of the manufacture order line item is to be produced.
   bom_number:
     type: integer
-    nullable: true
+    
     description: The Bill of Materials (BOM) number of the manufacture order line item.
   bom_name:
     type: string
-    nullable: true
+    
     description: The Bill of Materials (BOM) name of the manufacture order line item.
   priority:
     type: string
-    nullable: true
+    
     description: The priority of the manufacture order line item.
   manufacture_order_number:
     type: integer
-    nullable: true
+    
     description: The number of the manufacture order for which the manufacture order line item belongs to.

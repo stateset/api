@@ -21,13 +21,3 @@ properties:
     format: date
   memo:
     type: string
-  required:
-    - id
-    - number
-    - site
-    - yield_location
-    - priority
-    - expected_completion_date
-    - created_on
-    - issued_on
-    - memo

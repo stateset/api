@@ -6,12 +6,12 @@ parameters:
       type: boolean
 get:
   tags:
-    - Work Orders
-  summary: Get account by work order id
+    - Manufacture Orders
+  summary: Get account by manufacture order id
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getWorkOrdes
+  operationId: getManufactureOrders
   parameters:
     - name: limit
       in: query
@@ -21,19 +21,19 @@ get:
         type: number
     - name: offset
       in: query
-      description: Offset to return work orders
+      description: Offset to return manufacture orders
       required: true
       schema:
         type: number
     - name: order_direction
       in: query
-      description: Direction to return work orders
+      description: Direction to return manufacture orders
       required: true
       schema:
         type: string
   security:
     - main_auth:
-        - read:workorders
+        - read:manufactureorders
     - api_key: []
   responses:
     '200':
@@ -41,7 +41,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/WorkOrder.yaml
+            $ref: ../components/schemas/ManufactureOrder.yaml
           example:
             name: riggsandporter.com
             email: user@example.com
@@ -49,5 +49,5 @@ get:
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Work Order not found
+      description: Manufacture Order not found
       $ref: ../components/responses/Problem.yaml
