@@ -2,8 +2,6 @@ type: object
 properties:
   id:
     type: string
-    primary_key: true
-    unique: true
 
   status:
     type: string
@@ -41,17 +39,17 @@ properties:
     type: string
     description: The reason for the return.
     
-  order_date:
-    type: date
-    description: The date the order was placed.
+  order_string:
+    type: string
+    description: The string the order was placed.
     
-  shipped_date:
-    type: date
-    description: The date the order was shipped.
+  shipped_string:
+    type: string
+    description: The string the order was shipped.
     
-  requested_date:
-    type: date
-    description: The date the return was requested.
+  requested_string:
+    type: string
+    description: The string the return was requested.
     
   enteredBy:
     type: string
@@ -77,9 +75,9 @@ properties:
     type: string
     description: The total amount refunded.
     
-  created_date:
+  created_string:
     type: timestamp with time zone
-    description: The date the return was created.
+    description: The string the return was created.
     
     default: now()
   reason_category:
@@ -90,17 +88,17 @@ properties:
     type: numeric
     description: The flat rate shipping amount.
     
-  refunded_date:
-    type: date
-    description: The date the return was refunded.
+  refunded_string:
+    type: string
+    description: The string the return was refunded.
     
-  warehouse_received_date:
+  warehouse_received_string:
     type: timestamp with time zone
-    description: The date the return was received at the warehouse.
+    description: The string the return was received at the warehouse.
     
-  warehouse_condition_date:
+  warehouse_condition_string:
     type: timestamp with time zone
-    description: The date the condition of the return was verified at the warehouse.
+    description: The string the condition of the return was verified at the warehouse.
 
   fedex_status:
     type: string
@@ -136,7 +134,7 @@ properties:
     description: The workflow ID associated with the return.
     
   sso_id:
-    type: uuid
+    type: string
     description: The unique identifier of the SSO user who initiated the return.
     
   customer_email_normalized:
