@@ -1,0 +1,90 @@
+get:
+  tags:
+    - Contacts
+  summary: Get contacts by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getContactsById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:contacts
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Contacts.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Note not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Contacts
+  summary: Update contacts
+  description: This can only be done by the logged in user.
+  operationId: updateContacts
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:contacts
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Contacts.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Contacts.yaml
+    description: Updated contacts object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid contacts supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Contacts not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Contacts
+  summary: Delete contacts
+  description: This can only be done by the logged in return.
+  operationId: deleteContacts
+  parameters:
+    - name: id
+      in: path
+      description: The id of the contacts that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:contacts
+  responses:
+    '400':
+      description: Invalid contacts supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Contacts not found
+      $ref: ../components/responses/Problem.yaml

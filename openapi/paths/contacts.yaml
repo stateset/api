@@ -1,0 +1,42 @@
+get:
+  tags:
+    - Contacts
+  summary: Get contact by id
+  description: 
+  operationId: getContacts
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Offset to return contacts
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return contacts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:contacts
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Contacts.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Manufacture Order not found
+      $ref: ../components/responses/Problem.yaml

@@ -94,6 +94,10 @@ paths:
     $ref: paths/accounts.yaml
   /accounts/{id}:
     $ref: paths/accounts.yaml
+  /contacts:
+    $ref: paths/contacts.yaml
+  /contacts/{id}:
+    $ref: paths/contacts_{id}.yaml
   /billofmaterials:
     $ref: paths/billofmaterials.yaml
   /billofmaterials/{id}:
