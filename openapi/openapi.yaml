@@ -63,7 +63,7 @@ tags:
     description: Operations related to packing lists.
   - name: Packing List Item
     description: Operations related to packing list items.
-  - name: Pick
+  - name: Picks
     description: Operations related to picks.
   - name: Pick Line Item
     description: Operations related to pick line items.
