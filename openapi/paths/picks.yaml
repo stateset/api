@@ -35,7 +35,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Picks.yaml
+            $ref: ../components/schemas/Pick.yaml
           example:
             id: 321313221231
     '403':
