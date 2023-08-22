@@ -2,7 +2,6 @@ type: object
 properties:
   id:
     type: string
-    format: uuid
     description: The unique identifier for the contact.
   firstName:
     type: string
@@ -15,7 +14,6 @@ properties:
     description: The phone number of the contact.
   email:
     type: string
-    format: email
     description: The email address of the contact.
   controller:
     type: string
@@ -25,11 +23,9 @@ properties:
     description: The processor of the contact.
   account_id:
     type: string
-    format: uuid
     description: The unique identifier for the account associated with the contact.
   user_id:
     type: string
-    format: uuid
     description: The unique identifier for the user associated with the contact.
   title:
     type: string
@@ -113,4 +109,3 @@ properties:
     description: The user who last modified the contact.
   vendor_id:
     type: string
-    format: uuid
