@@ -39,7 +39,7 @@ tags:
     description: Operations related to bill of materials.
   - name: Bill Of Materials Line Items
     description: Operations related to bill of materials line items.
-  - name: Case
+  - name: Cases
     description: Operations related to cases.
   - name: Contacts
     description: Operations related to contacts.
@@ -102,6 +102,8 @@ paths:
     $ref: paths/billofmaterials.yaml
   /billofmaterials/{id}:
     $ref: paths/billofmaterials_{id}.yaml
+  /cases:
+    $ref: paths/cases.yaml
   /customers:
     $ref: paths/customers.yaml
   /customers/{id}:
