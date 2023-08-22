@@ -23,7 +23,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/PackingLists.yaml
+            $ref: ../components/schemas/PackingList.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
