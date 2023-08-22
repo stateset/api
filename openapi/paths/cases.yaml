@@ -42,7 +42,7 @@ get:
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
     '404':
-      description: Note not found
+      description: Case not found
       $ref: ../components/responses/Problem.yaml
 post:
   tags:
@@ -51,7 +51,7 @@ post:
   description: |
     Create a new case.
     This can only be done by the logged in.
-  operationId: createNote
+  operationId: createCase
   security:
     - main_auth:
         - write:cases
@@ -67,7 +67,7 @@ post:
     required: true
   responses:
     '201':
-      description: Note created
+      description: Case created
     '400':
       description: Invalid message supplied
       $ref: ../components/responses/Problem.yaml
