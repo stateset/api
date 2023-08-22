@@ -1,0 +1,78 @@
+get:
+  tags:
+    - Packing Lists
+  summary: Get packing lists
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPackingLists
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return packing lists
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:packinglists
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PackingList.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Packing Lists
+  summary: Create a new packing list
+  description: |
+    Create a new packing list.
+    This can only be done by the logged in packing list.
+  operationId: createPackingList
+  security:
+    - main_auth:
+        - write:packinglists
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/PackingList.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/PackingList.yaml
+    description: Created packing list object
+    required: true
+  responses:
+    '201':
+      description: Packing List created
+    '400':
+      description: Invalid packing list supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

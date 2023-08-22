@@ -1,0 +1,90 @@
+get:
+  tags:
+    - Packing Lists
+  summary: Get packing list by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPackingListById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:packinglists
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PackingLists.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: User not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - PackingLists
+  summary: Updated packinglist
+  description: This can only be done by the logged in user.
+  operationId: updatePackingList
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:packingslists
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/PackingList.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/PackingList.yaml
+    description: Updated reuturn object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid packinglist supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: PackingList not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Packing Lists
+  summary: Delete packinglist
+  description: This can only be done by the logged in packinglist.
+  operationId: deletePackingList
+  parameters:
+    - name: id
+      in: path
+      description: The id of the packinglist that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:packinglists
+  responses:
+    '400':
+      description: Invalid packinglist supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: PackingList not found
+      $ref: ../components/responses/Problem.yaml
