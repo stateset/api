@@ -45,7 +45,7 @@ tags:
     description: Operations related to contacts.
   - name: Customers
     description: Operations related to customers.
-  - name: CycleCount
+  - name: Cycle Count
     description: Operations related to cycle counts.
   - name: Inventory Items
     description: Operations related to inventory items.
