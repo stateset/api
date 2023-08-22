@@ -30,38 +30,3 @@ get:
     '404':
       description: Packing List Item not found
       $ref: ../components/responses/Problem.yaml
-put:
-  tags:
-    - Packing List Items
-  summary: Updated packing list line item
-  description: This can only be done by the logged in user.
-  operationId: updatePackingListItem
-  parameters:
-    - name: id
-      in: path
-      description: The id that needs to be updated
-      required: true
-      schema:
-        type: string
-  security:
-    - main_auth:
-        - write:packinglistitems
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: ../components/schemas/PackingListItem.yaml
-      application/xml:
-        schema:
-          $ref: ../components/schemas/PackingListItem.yaml
-    description: Updated packing list item object
-    required: true
-  responses:
-    '200':
-      description: OK
-    '400':
-      description: Invalid packing list item supplied
-      $ref: ../components/responses/Problem.yaml
-    '404':
-      description: Packing List Item not found
-      $ref: ../components/responses/Problem.yaml

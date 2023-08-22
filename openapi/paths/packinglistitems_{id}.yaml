@@ -35,7 +35,7 @@ put:
     - Packing List Item
   summary: Updated packing list item
   description: This can only be done by the logged in user.
-  operationId: updatePackingListLineItem
+  operationId: updatePackingListItemById
   parameters:
     - name: id
       in: path
