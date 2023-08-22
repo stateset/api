@@ -130,6 +130,10 @@ paths:
     $ref: paths/notes.yaml
   /notes/{id}:
     $ref: paths/notes_{id}.yaml
+  /packinglists:
+    $ref: paths/packinglists.yaml
+  /packinglists/{id}:
+    $ref: paths/packinglists_{id}.yaml
   /returns:
     $ref: paths/returns.yaml
   /returns/{id}:
