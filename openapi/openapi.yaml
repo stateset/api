@@ -49,8 +49,6 @@ tags:
     description: Operations related to cycle counts.
   - name: Inventory Items
     description: Operations related to inventory items.
-  - name: Leads
-    description: Operations related to leads.
   - name: Manufacture Orders
     description: Operations related to manufacturing orders.
   - name: Manufacture Order Line Items
@@ -71,12 +69,6 @@ tags:
     description: Operations related to returns.
   - name: Return Line Items
     description: Operations related to return items.
-  - name: Suppliers
-    description: Operations related to suppliers.
-  - name: User
-    description: Operations related to users.
-  - name: Vendors
-    description: Operations related to vendors.
   - name: Warranties
     description: Operations related to warranties.
   - name: Warranty Line Items
