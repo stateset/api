@@ -131,7 +131,7 @@ paths:
   /notes/{id}:
     $ref: paths/notes_{id}.yaml
   /picks:
-    $ref: paths/pickss.yaml
+    $ref: paths/picks.yaml
   /picks/{id}:
     $ref: paths/picks_{id}.yaml
   /packinglists:
