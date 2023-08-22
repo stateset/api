@@ -1,0 +1,78 @@
+get:
+  tags:
+    - Picks
+  summary: Get picks
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPicks
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return packing lists
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:picks
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Picks.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Return not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Picks
+  summary: Create a new pick
+  description: |
+    Create a new pick.
+    This can only be done by the logged in pick.
+  operationId: createPick
+  security:
+    - main_auth:
+        - write:packinglists
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Pick.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Pick.yaml
+    description: Created pick object
+    required: true
+  responses:
+    '201':
+      description: Pick created
+    '400':
+      description: Invalid pick supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

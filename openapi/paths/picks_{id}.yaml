@@ -1,0 +1,90 @@
+get:
+  tags:
+    - Picks
+  summary: Get pick by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPickById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:picks
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Pick.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: User not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Picks
+  summary: Updated pick
+  description: This can only be done by the logged in user.
+  operationId: updatePick
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:packingslists
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Pick.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/Pick.yaml
+    description: Updated reuturn object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid pick supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Pick not found
+      $ref: ../components/responses/Problem.yaml
+delete:
+  tags:
+    - Picks
+  summary: Delete pick
+  description: This can only be done by the logged in pick.
+  operationId: deletePick
+  parameters:
+    - name: id
+      in: path
+      description: The id of the pick that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:picks
+  responses:
+    '400':
+      description: Invalid pick supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Pick not found
+      $ref: ../components/responses/Problem.yaml
