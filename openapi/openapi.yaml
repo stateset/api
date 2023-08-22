@@ -59,13 +59,13 @@ tags:
     description: Operations related to messages.
   - name: Notes
     description: Operations related to notes.
-  - name: PackingList
+  - name: Packing Lists
     description: Operations related to packing lists.
-  - name: PackingListItem
+  - name: Packing List Item
     description: Operations related to packing list items.
   - name: Pick
     description: Operations related to picks.
-  - name: PickLineItem
+  - name: Pick Line Item
     description: Operations related to pick line items.
   - name: Returns
     description: Operations related to returns.
