@@ -1,18 +1,11 @@
 get:
   tags:
     - Packing List Items
-  summary: Get packing list item by id
+  summary: Get packing list items
   description: |
     Some description of the operation.
     You can use `Markdown` here.
-  operationId: getPackingListItemById
-  parameters:
-    - name: id
-      in: path
-      description: The id that needs to be fetched
-      required: true
-      schema:
-        type: string
+  operationId: getPackingListItems
   security:
     - main_auth:
         - read:packinglistitems
