@@ -139,6 +139,10 @@ paths:
   /packinglists:
     $ref: paths/packinglists.yaml
   /packinglists/{id}:
+    $ref: paths/packinglistitems_{id}.yaml
+  /packinglistitems:
+    $ref: paths/packinglistitems.yaml
+  /packinglists/{id}:
     $ref: paths/packinglists_{id}.yaml
   /returns:
     $ref: paths/returns.yaml

@@ -1,0 +1,67 @@
+get:
+  tags:
+    - Packing List Items
+  summary: Get packing list item by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPackingListItemById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:packinglistitems
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PackingListItem.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Packing List Item not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Packing List Items
+  summary: Updated packing list line item
+  description: This can only be done by the logged in user.
+  operationId: updatePackingListItem
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:packinglistitems
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/PackingListItem.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/PackingListItem.yaml
+    description: Updated packing list item object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid packing list item supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Packing List Item not found
+      $ref: ../components/responses/Problem.yaml
