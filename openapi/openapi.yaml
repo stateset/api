@@ -100,6 +100,8 @@ paths:
     $ref: paths/customers.yaml
   /customers/{id}:
     $ref: paths/customers_{id}.yaml
+  /cyclecounts:
+    $ref: paths/cyclecounts.yaml
   /billofmaterialsitems:
     $ref: paths/billofmaterialslineitems.yaml
   /billofmaterialsitems/{id}:

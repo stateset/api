@@ -1,0 +1,78 @@
+get:
+  tags:
+    - Cycle Counts
+  summary: Get cycle counts
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getCycleCounts
+  parameters:
+    - name: limit
+      in: query
+      description: The number of items to return
+      required: true
+      schema:
+        type: number
+    - name: offset
+      in: query
+      description: Filter users without email
+      required: true
+      schema:
+        type: number
+    - name: order_direction
+      in: query
+      description: Direction to return accounts
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:cyclecounts
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CycleCount.yaml
+          example:
+            id: 321313221231
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Case not found
+      $ref: ../components/responses/Problem.yaml
+post:
+  tags:
+    - Cycle Counts
+  summary: Create a new cycle count
+  description: |
+    Create a new cycle count.
+    This can only be done by the logged in.
+  operationId: createCycleCount
+  security:
+    - main_auth:
+        - write:cyclecounts
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CycleCount.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/CycleCount.yaml
+    description: Created cycle count object
+    required: true
+  responses:
+    '201':
+      description: Cycle Count created
+    '400':
+      description: Invalid message supplied
+      $ref: ../components/responses/Problem.yaml
+    '405':
+      description: Validation exception
+      $ref: ../components/responses/Problem.yaml
+
+

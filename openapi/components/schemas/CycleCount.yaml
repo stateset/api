@@ -2,9 +2,8 @@ type: object
 properties:
   id:
     type: string
-    format: uuid
-
     description: The unique identifier of the cycle count line item.
+    
   cycle_count_number:
     type: integer
     
