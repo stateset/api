@@ -63,7 +63,7 @@ tags:
     description: Operations related to packing list items.
   - name: Picks
     description: Operations related to picks.
-  - name: Pick Line Item
+  - name: Pick Line Items
     description: Operations related to pick line items.
   - name: Returns
     description: Operations related to returns.
@@ -128,6 +128,10 @@ paths:
     $ref: paths/picks.yaml
   /picks/{id}:
     $ref: paths/picks_{id}.yaml
+  /picklineitems/{id}:
+    $ref: paths/picklineitems_{id}.yaml
+  /picklineitems:
+    $ref: paths/picklineitems.yaml
   /packinglists:
     $ref: paths/packinglists.yaml
   /packinglists/{id}:

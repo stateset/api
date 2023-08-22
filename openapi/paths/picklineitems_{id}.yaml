@@ -1,0 +1,67 @@
+get:
+  tags:
+    - Pick Line Items
+  summary: Get pick line items by id
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPickLineItemById
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be fetched
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - read:picklineitems
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PickLineItem.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Pick List Item not found
+      $ref: ../components/responses/Problem.yaml
+put:
+  tags:
+    - Pick Line Items
+  summary: Updated pick line item
+  description: This can only be done by the logged in user.
+  operationId: updatePickLineItem
+  parameters:
+    - name: id
+      in: path
+      description: The id that needs to be updated
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - write:picklineitems
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/PickLineItem.yaml
+      application/xml:
+        schema:
+          $ref: ../components/schemas/PickLineItem.yaml
+    description: Updated pick line item object
+    required: true
+  responses:
+    '200':
+      description: OK
+    '400':
+      description: Invalid pick line item supplied
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Pick Line Item not found
+      $ref: ../components/responses/Problem.yaml

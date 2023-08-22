@@ -1,0 +1,25 @@
+get:
+  tags:
+    - Pick Line Items
+  summary: Get pick line items
+  description: |
+    Some description of the operation.
+    You can use `Markdown` here.
+  operationId: getPickLineItems
+  security:
+    - main_auth:
+        - read:picklineitems
+    - api_key: []
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PickLineItem.yaml
+    '403':
+      description: Forbidden
+      $ref: ../components/responses/Problem.yaml
+    '404':
+      description: Packing List Item not found
+      $ref: ../components/responses/Problem.yaml
