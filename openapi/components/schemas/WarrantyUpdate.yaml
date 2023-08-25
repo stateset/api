@@ -1,0 +1,60 @@
+type: object
+properties:
+  warrantyNumber:
+    type: string
+  warrantyName:
+    type: string
+  warrantyType:
+    type: string
+  createdDate:
+    type: string
+    format: date-time
+  expirationDate:
+    type: string
+    format: date-time
+  order_id:
+    type: string
+  description:
+    type: string
+  status:
+    type: string
+  issue:
+    type: string
+  tracking_number:
+    type: string
+  action_needed:
+    type: string
+  customerEmail:
+    type: string
+  rma:
+    type: string
+  zendesk_number:
+    type: string
+  enteredBy:
+    type: string
+  order_date:
+    type: string
+    format: date-time
+  shipped_date:
+    type: string
+    format: date-time
+  requested_date:
+    type: string
+    format: date-time
+  condition:
+    type: string
+  reported_condition:
+    type: string
+  amount:
+    type: string
+  tax_refunded:
+    type: string
+  total_refunded:
+    type: string
+  created_date:
+    type: string
+    format: date-time
+  serial_number:
+    type: string
+  reason_category:
+    type: string

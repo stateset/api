@@ -1,0 +1,32 @@
+type: object
+properties:
+  number:
+    type: integer
+    
+    description: The number of the bill of materials.
+  name:
+    type: string
+    
+    description: The name of the bill of materials.
+  valid:
+    type: string
+    
+    description: Whether or not the bill of materials is valid.
+  groups:
+    type: string
+    
+    description: The groups associated with the bill of materials.
+  created_at:
+    type: string
+    format: date-time
+    
+    description: The date and time the bill of materials was created.
+  updated_at:
+    type: string
+    format: date-time
+    
+    description: The date and time the bill of materials was last updated.
+  description:
+    type: string
+    
+    description: A description of the bill of materials.

@@ -1,0 +1,70 @@
+type: object
+properties:
+  number:
+    type: integer
+    
+    description: The work order number.
+  site:
+    type: string
+    
+    description: The site where the work order is located.
+  work_order_type:
+    type: string
+    
+    description: The type of work order.
+  location:
+    type: string
+    
+    description: The location where the work order is taking place.
+  part:
+    type: string
+    
+    description: The part being worked on in the work order.
+  order_number:
+    type: string
+    
+    description: The order number associated with the work order.
+  manufacture_order:
+    type: string
+    
+    description: The manufacture order associated with the work order.
+  status:
+    type: string
+    
+    description: The current status of the work order.
+  created_by:
+    type: string
+    
+    description: The user who created the work order.
+  created_at:
+    type: string
+    format: date-time
+    
+    description: The date and time the work order was created.
+  updated_at:
+    type: string
+    format: date-time
+    
+    description: The date and time the work order was last updated.
+  issue_date:
+    type: string
+    format: date
+    
+    description: The date the work order was issued.
+  expected_completion_date:
+    type: string
+    format: date
+    
+    description: The expected completion date for the work order.
+  priority:
+    type: string
+    
+    description: The priority level of the work order.
+  memo:
+    type: string
+    
+    description: Any additional notes or comments about the work order.
+  bill_of_materials_number:
+    type: integer
+    
+    description: The bill of materials number associated with the work order.

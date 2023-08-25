@@ -1,0 +1,35 @@
+type: object
+properties:
+  amount:
+    type: number
+    format: decimal
+    description: The monetary amount associated with the return line item
+  condition:
+    type: string
+    description: Describes the condition of the returned item
+  flat_rate_shipping:
+    type: boolean
+    description: Indicates whether the shipping rate is a flat rate
+  id:
+    type: integer
+    description: Unique identifier for the return line item
+  name:
+    type: string
+    description: Name or description of the return line item
+  price:
+    type: number
+    format: decimal
+    description: The price of the return line item
+  return_id:
+    type: integer
+    description: Unique identifier for the return associated with the line item
+  serial_number:
+    type: string
+    description: Unique serial number associated with the returned item
+  sku:
+    type: string
+    description: Stock Keeping Unit (SKU) of the returned item
+  tax_refunded:
+    type: number
+    format: decimal
+    description: The amount of tax refunded for the return line item

@@ -1,0 +1,31 @@
+type: object
+properties:
+  amount:
+    type: number
+    format: decimal
+    description: The monetary amount associated with the warranty line item
+  condition:
+    type: string
+    description: Describes the condition of the replaced item
+  flat_rate_shipping:
+    type: boolean
+    description: Indicates whether the shipping rate is a flat rate
+  id:
+    type: integer
+    description: Unique identifier for the warranty line item
+  name:
+    type: string
+    description: Name or description of the warranty line item
+  price:
+    type: number
+    format: decimal
+    description: The price of the warranty line item
+  warranty_id:
+    type: integer
+    description: Unique identifier for the warranty associated with the line item
+  serial_number:
+    type: string
+    description: Unique serial number associated with the warranty item
+  sku:
+    type: string
+    description: Stock Keeping Unit (SKU) of the replaced item
