@@ -3,8 +3,7 @@ get:
     - Inventory Items
   summary: Get inventory items
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Inventory Items a list of inventory items.
   operationId: getInventoryItems
   parameters:
     - name: limit

@@ -3,8 +3,7 @@ get:
     - Contacts
   summary: Get contacts by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get contacts by id.
   operationId: getContactsById
   parameters:
     - name: id

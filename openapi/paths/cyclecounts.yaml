@@ -3,8 +3,7 @@ get:
     - Cycle Counts
   summary: Get cycle counts
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Cycle Counts a list of cycle counts.
   operationId: getCycleCounts
   parameters:
     - name: limit

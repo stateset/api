@@ -1,10 +1,9 @@
 get:
   tags:
     - Accounts
-  summary: Get account by account name
+  summary: Get accounts
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get accounts a list of accounts.
   operationId: getAccountByName
   parameters:
     - name: limit

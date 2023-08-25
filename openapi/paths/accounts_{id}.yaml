@@ -3,8 +3,7 @@ get:
     - Accounts
   summary: Get account by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get account by id.
   operationId: getAccountById
   parameters:
     - name: id

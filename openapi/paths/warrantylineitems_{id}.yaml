@@ -3,8 +3,7 @@ get:
     - Warranty Line Items
   summary: Get warranty line item by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get warranty line item by id.
   operationId: getWarrantyLineItemById
   parameters:
     - name: id

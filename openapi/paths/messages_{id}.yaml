@@ -3,8 +3,7 @@ get:
     - Messages
   summary: Get message by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get message by id.
   operationId: getMessageById
   parameters:
     - name: id

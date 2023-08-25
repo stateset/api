@@ -3,8 +3,7 @@ get:
     - Customers
   summary: Get customer by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get customer by id.
   operationId: getCustomers
   parameters:
     - name: limit

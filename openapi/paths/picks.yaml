@@ -3,8 +3,7 @@ get:
     - Picks
   summary: Get picks
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Picks a list of picks.
   operationId: getPicks
   parameters:
     - name: limit

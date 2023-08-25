@@ -3,8 +3,7 @@ get:
     - Pick Line Items
   summary: Get pick line items
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get pick line items a list of pick line items.
   operationId: getPickLineItems
   security:
     - main_auth:

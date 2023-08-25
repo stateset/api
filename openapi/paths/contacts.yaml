@@ -1,8 +1,8 @@
 get:
   tags:
     - Contacts
-  summary: Get contact by id
-  description: Get contact by id
+  summary: Get contacts
+  description: Get contacts
   operationId: getContacts
   parameters:
     - name: limit

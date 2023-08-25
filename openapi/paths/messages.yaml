@@ -3,8 +3,7 @@ get:
     - Messages
   summary: Get messages
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Messages a list of messages.
   operationId: getMessages
   parameters:
     - name: limit

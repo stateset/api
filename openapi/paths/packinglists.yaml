@@ -3,8 +3,7 @@ get:
     - Packing Lists
   summary: Get packing lists
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Packing Lists a list of packing lists.
   operationId: getPackingLists
   parameters:
     - name: limit

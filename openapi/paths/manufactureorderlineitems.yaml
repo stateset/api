@@ -1,10 +1,9 @@
 get:
   tags:
     - Manufacture Order Line Items
-  summary: Get manufactureItem by id
+  summary: Get manufactureItems
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get manufactureItems
   operationId: getManufactureItemById
   parameters:
     - name: limit

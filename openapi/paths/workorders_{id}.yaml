@@ -3,8 +3,7 @@ get:
     - Work Orders
   summary: Get work order by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get Work Order by id.
   operationId: getWorkOrderById
   parameters:
     - name: id

@@ -3,8 +3,7 @@ get:
     - Return Line Items
   summary: Get returnItem by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get returnItem by id.
   operationId: getReturnItemById
   parameters:
     - name: limit

@@ -1,10 +1,9 @@
 get:
   tags:
     -  Agreement
-  summary: Get agreement by agreement name
+  summary: Get agreements
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get agreements a list of agreements.
   operationId: getAgreementByName
   parameters:
     - name: limit

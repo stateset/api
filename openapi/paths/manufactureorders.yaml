@@ -1,10 +1,9 @@
 get:
   tags:
     - Manufacture Orders
-  summary: Get account by manufacture order id
+  summary: Get manufacmture orders
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get manufacture orders.
   operationId: getManufactureOrders
   parameters:
     - name: limit

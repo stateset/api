@@ -3,8 +3,7 @@ get:
     - Bill Of Materials Line Items
   summary: Get bill of materials line item by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get bill of materials line item by id.
   operationId: getBillOfMaterialsLineItemById
   parameters:
     - name: id

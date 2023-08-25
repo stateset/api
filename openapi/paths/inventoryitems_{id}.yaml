@@ -3,8 +3,7 @@ get:
     - Inventory Items
   summary: Get inventory items by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get inventory items by id.
   operationId: getInventoryItemById
   parameters:
     - name: id

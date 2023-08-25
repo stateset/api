@@ -3,8 +3,7 @@ get:
     - Notes
   summary: Get notes
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Notes a list of notes.
   operationId: getNotes
   parameters:
     - name: limit

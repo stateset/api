@@ -3,8 +3,7 @@ get:
     - Returns
   summary: Get returns
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Returns a list of returns.
   operationId: getReturns
   parameters:
     - name: limit

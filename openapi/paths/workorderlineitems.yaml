@@ -3,8 +3,7 @@ get:
     - Work Order Line Items
   summary: Get work order item by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get work order item by id.
   operationId: getWorkItemById
   parameters:
     - name: limit

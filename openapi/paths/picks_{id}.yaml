@@ -3,8 +3,7 @@ get:
     - Picks
   summary: Get pick by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get pick by id.
   operationId: getPickById
   parameters:
     - name: id

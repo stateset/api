@@ -3,8 +3,7 @@ get:
     - Manufacture Order Line Items
   summary: Get manufacture line item by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get manufacture line item by id.
   operationId: getManufactureLineItemById
   parameters:
     - name: id

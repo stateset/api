@@ -3,8 +3,7 @@ get:
     - Cases
   summary: Get cases
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Cases a list of cases.
   operationId: getCases
   parameters:
     - name: limit

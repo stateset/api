@@ -3,8 +3,7 @@ get:
     - Warranties
   summary: Get warranties
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Warranties a list of warranties.
   operationId: getWarranties
   parameters:
     - name: limit

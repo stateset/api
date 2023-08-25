@@ -3,8 +3,7 @@ get:
     - Warranty
   summary: Get warranty by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get warranty by id.
   operationId: getWarrantyById
   parameters:
     - name: id

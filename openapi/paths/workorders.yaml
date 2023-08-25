@@ -3,8 +3,7 @@ get:
     - Work Orders
   summary: Get account by work order id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get work orders.
   operationId: getWorkOrdes
   parameters:
     - name: limit

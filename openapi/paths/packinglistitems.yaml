@@ -3,8 +3,7 @@ get:
     - Packing List Items
   summary: Get packing list items
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Packing List Items a list of packing list items.
   operationId: getPackingListItems
   security:
     - main_auth:

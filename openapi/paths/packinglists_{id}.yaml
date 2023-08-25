@@ -3,8 +3,7 @@ get:
     - Packing Lists
   summary: Get packing list by id
   description: |
-    Some description of the operation.
-    You can use `Markdown` here.
+    Get packing list by id.
   operationId: getPackingListById
   parameters:
     - name: id
