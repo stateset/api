@@ -22,7 +22,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/ManufactureOrderLineItem.yaml
+            $ref: ../components/schemas/BillOfMaterialsLineItem.yaml
     '403':
       description: Forbidden
       $ref: ../components/responses/Problem.yaml
@@ -49,11 +49,11 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/ManufactureOrderLineItem.yaml
+          $ref: ../components/schemas/BillOfMaterialsLineItemUpdate.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/ManufactureOrderLineItem.yaml
-    description: Updated manufacture order line item object
+          $ref: ../components/schemas/BillOfMaterialsLineItemUpdate.yaml
+    description: Updated bill of materials line item object
     required: true
   responses:
     '200':

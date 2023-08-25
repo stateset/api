@@ -49,10 +49,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/BillOfMaterials.yaml
+          $ref: ../components/schemas/BillOfMaterialsUpdate.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/BillOfMaterials.yaml
+          $ref: ../components/schemas/BillOfMaterialsUpdate.yaml
     description: Updated bill of materials object
     required: true
   responses:
