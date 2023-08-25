@@ -49,10 +49,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Warranty.yaml
+          $ref: ../components/schemas/WarrantyUpdate.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/Warranty.yaml
+          $ref: ../components/schemas/WarrantyUpdate.yaml
     description: Updated reuturn object
     required: true
   responses:

@@ -48,10 +48,10 @@ put:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Return.yaml
+          $ref: ../components/schemas/ReturnUpdate.yaml
       application/xml:
         schema:
-          $ref: ../components/schemas/Return.yaml
+          $ref: ../components/schemas/ReturnUpdate.yaml
     description: Updated reuturn object
     required: true
   responses:

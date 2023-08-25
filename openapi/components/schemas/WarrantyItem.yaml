@@ -1,94 +1,31 @@
 type: object
 properties:
-  id:
-    type: string
-    description: The unique identifier of the warranty
-  status:
-    type: string
-    
-    description: The status of the warranty
-  order_id:
-    type: string
-    
-    description: The unique identifier of the order associated with the warranty
-  rma:
-    type: string
-    
-    description: The warranty merchandise authorization number
-  tracking_number:
-    type: string
-    
-    description: The tracking number of the warrantyed item
-  description:
-    type: string
-    
-    description: A description of the warranty
-  customerEmail:
-    type: string
-    
-    description: The email address of the customer who initiated the warranty
-  zendesk_number:
-    type: string
-    
-    description: The unique identifier of the Zendesk ticket associated with the warranty
-  action_needed:
-    type: string
-    
-    description: Any action required to process the warranty
-  issue:
-    type: string
-    
-    description: The reason for the warranty
-  order_date:
-    type: string
-    format: date
-    
-    description: The date the order was placed
-  shipped_date:
-    type: string
-    format: date
-    
-    description: The date the order was shipped
-  requested_date:
-    type: string
-    format: date
-    
-    description: The date the warranty was requested
-  enteredBy:
-    type: string
-    
-    description: The name of the employee who entered the warranty into the system
-  serial_number:
-    type: string
-    
-    description: The serial number of the warranty item
+  amount:
+    type: number
+    format: decimal
+    description: The monetary amount associated with the warranty line item
   condition:
     type: string
-    
-    description: The condition of the warranty item
-  customer_id:
+    description: Describes the condition of the replaced item
+  flat_rate_shipping:
+    type: boolean
+    description: Indicates whether the shipping rate is a flat rate
+  id:
+    type: integer
+    description: Unique identifier for the warranty line item
+  name:
     type: string
-    format: uuid
-    
-    description: The unique identifier of the customer who initiated the warranty
-  amount:
+    description: Name or description of the warranty line item
+  price:
+    type: number
+    format: decimal
+    description: The price of the warranty line item
+  warranty_id:
+    type: integer
+    description: Unique identifier for the warranty associated with the line item
+  serial_number:
     type: string
-    
-    description: The total amount refunded for the warranty
-  reported_condition:
+    description: Unique serial number associated with the warranty item
+  sku:
     type: string
-    
-    description: The condition of the item reported by the customer
-  tax_refunded:
-    type: string
-    
-    description: The amount of tax refunded for the warranty
-  total_refunded:
-    type: string
-    
-    description: The total amount refunded for the warranty, including tax
-  created_date:
-    type: string
-    format: date
-    
-    description: The date
+    description: Stock Keeping Unit (SKU) of the replaced item
