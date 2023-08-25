@@ -53,7 +53,7 @@ put:
       application/xml:
         schema:
           $ref: ../components/schemas/WarrantyUpdate.yaml
-    description: Updated reuturn object
+    description: Updated warranty object
     required: true
   responses:
     '200':

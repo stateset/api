@@ -53,7 +53,7 @@ put:
       application/xml:
         schema:
           $ref: ../components/schemas/Pick.yaml
-    description: Updated reuturn object
+    description: Updated pick object
     required: true
   responses:
     '200':

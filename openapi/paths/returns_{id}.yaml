@@ -52,7 +52,7 @@ put:
       application/xml:
         schema:
           $ref: ../components/schemas/ReturnUpdate.yaml
-    description: Updated reuturn object
+    description: Updated return object
     required: true
   responses:
     '200':
