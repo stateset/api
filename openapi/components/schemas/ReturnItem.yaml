@@ -1,8 +1,5 @@
 type: object
 properties:
-  id: 
-    type: string
-    description: Unique identifier for the return line item
   amount:
     type: number
     format: decimal
