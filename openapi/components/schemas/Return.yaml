@@ -39,17 +39,17 @@ properties:
     type: string
     description: The reason for the return.
     
-  order_string:
+  order_date:
     type: string
-    description: The string the order was placed.
+    description: The date the order was placed.
     
-  shipped_string:
+  shipped_date:
     type: string
-    description: The string the order was shipped.
+    description: The date the order was shipped.
     
-  requested_string:
+  requested_date:
     type: string
-    description: The string the return was requested.
+    description: The date the return was requested.
     
   enteredBy:
     type: string
@@ -75,11 +75,6 @@ properties:
     type: string
     description: The total amount refunded.
     
-  created_string:
-    type: string
-    description: The string the return was created.
-    
-    default: now()
   reason_category:
     type: string
     description: The category of the reason for the return.
@@ -88,15 +83,15 @@ properties:
     type: integer
     description: The flat rate shipping amount.
     
-  refunded_string:
+  refunded_date:
     type: string
     description: The string the return was refunded.
     
-  warehouse_received_string:
+  warehouse_received_date:
     type: string
     description: The string the return was received at the warehouse.
     
-  warehouse_condition_string:
+  warehouse_condition_date:
     type: string
     description: The string the condition of the return was verified at the warehouse.
 

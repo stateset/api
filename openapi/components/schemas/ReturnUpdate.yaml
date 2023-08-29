@@ -36,7 +36,7 @@ properties:
     type: string
     description: The reason for the return.
     
-  order_string:
+  order_date:
     type: string
     description: The string the order was placed.
     
